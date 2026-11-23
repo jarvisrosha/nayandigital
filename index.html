@@ -19,7 +19,7 @@
       --gold: #b48327;
       --border: #e5e7eb;
       --wa: #16a34a;
-      --logo-rot: -90deg;
+      --logo-angle: -90deg;
     }
 
     * {
@@ -41,41 +41,20 @@
       font-family: "Cormorant Garamond", Georgia, serif;
     }
 
-    /* Smooth Motion Keyframes */
-    @keyframes fadeUpMotion {
-      from {
-        opacity: 0;
-        transform: translateY(18px);
-      }
-      to {
-        opacity: 1;
-        transform: translateY(0);
-      }
-    }
-
-    @keyframes slideStrip {
-      0% { transform: translateX(0); }
-      100% { transform: translateX(-50%); }
-    }
-
-    .motion-up {
-      animation: fadeUpMotion 0.7s ease both;
-    }
-
     /* Header */
     header {
       position: sticky;
       top: 0;
       z-index: 50;
-      background: rgba(255, 255, 255, 0.94);
+      background: rgba(255, 255, 255, 0.96);
       backdrop-filter: blur(10px);
       border-bottom: 1px solid var(--border);
-      padding: 12px 24px;
+      padding: 12px 22px;
       display: flex;
       flex-wrap: wrap;
       align-items: center;
       justify-content: space-between;
-      gap: 14px;
+      gap: 12px;
     }
 
     .brand-box {
@@ -85,46 +64,48 @@
       text-decoration: none;
     }
 
-    .round-logo-sm {
-      width: 46px;
-      height: 46px;
+    .logo-circle-sm {
+      width: 50px;
+      height: 50px;
       border-radius: 50%;
       border: 2px solid var(--gold);
       background: var(--soft);
-      overflow: hidden;
       display: flex;
       align-items: center;
       justify-content: center;
+      overflow: hidden;
       flex-shrink: 0;
+      padding: 3px;
       font-weight: 700;
       color: var(--accent);
     }
 
-    .round-logo-sm img {
+    .logo-circle-sm img {
       width: 100%;
       height: 100%;
-      object-fit: cover;
-      transform: rotate(var(--logo-rot)) scale(1.22);
+      object-fit: contain;
+      border-radius: 50%;
+      transform: rotate(var(--logo-angle));
     }
 
     .brand-name {
       color: var(--ink);
-      font-size: 1.02rem;
+      font-size: 0.98rem;
       font-weight: 700;
-      letter-spacing: 0.8px;
+      letter-spacing: 0.7px;
       text-transform: uppercase;
     }
 
     nav {
       display: flex;
       flex-wrap: wrap;
-      gap: 16px;
+      gap: 14px;
     }
 
     nav a {
       color: var(--ink-2);
       text-decoration: none;
-      font-size: 0.78rem;
+      font-size: 0.76rem;
       font-weight: 600;
       letter-spacing: 0.8px;
       text-transform: uppercase;
@@ -136,38 +117,40 @@
 
     /* Hero */
     .hero {
-      padding: 64px 24px 48px;
+      padding: 60px 22px 46px;
       text-align: center;
       background: linear-gradient(180deg, #f8fafc 0%, #ffffff 100%);
       border-bottom: 1px solid var(--border);
     }
 
-    .round-logo-lg {
-      width: 152px;
-      height: 152px;
+    .logo-circle-lg {
+      width: 164px;
+      height: 164px;
       margin: 0 auto 20px;
       border-radius: 50%;
       border: 2.5px solid var(--gold);
       background: var(--soft);
       box-shadow: 0 14px 34px rgba(15, 23, 42, 0.1);
-      overflow: hidden;
       display: flex;
       align-items: center;
       justify-content: center;
+      overflow: hidden;
+      padding: 6px;
       font-size: 1.6rem;
       font-weight: 700;
       color: var(--accent);
     }
 
-    .round-logo-lg img {
+    .logo-circle-lg img {
       width: 100%;
       height: 100%;
-      object-fit: cover;
-      transform: rotate(var(--logo-rot)) scale(1.24);
+      object-fit: contain;
+      border-radius: 50%;
+      transform: rotate(var(--logo-angle));
     }
 
     .hero h1 {
-      font-size: clamp(1.9rem, 4.5vw, 3rem);
+      font-size: clamp(1.85rem, 4.4vw, 2.95rem);
       font-weight: 700;
       color: var(--ink);
       text-transform: uppercase;
@@ -177,14 +160,14 @@
     .hero-tag {
       color: var(--gold);
       font-style: italic;
-      font-size: clamp(1.05rem, 2.2vw, 1.3rem);
+      font-size: clamp(1rem, 2.2vw, 1.28rem);
       margin-bottom: 8px;
     }
 
     .hero-sub {
       color: var(--muted);
       font-size: 0.9rem;
-      margin-bottom: 24px;
+      margin-bottom: 22px;
     }
 
     .btn-group {
@@ -195,15 +178,16 @@
     }
 
     .btn {
-      padding: 12px 22px;
+      padding: 11px 22px;
       border-radius: 999px;
-      font-size: 0.82rem;
+      font-size: 0.8rem;
       font-weight: 700;
       letter-spacing: 0.8px;
       text-transform: uppercase;
       text-decoration: none;
       border: none;
       cursor: pointer;
+      display: inline-block;
       transition: transform 0.2s ease;
     }
 
@@ -227,40 +211,56 @@
       border: 1px solid var(--border);
     }
 
-    /* Motion Photo Slider Strip */
-    .slider-wrap {
-      overflow: hidden;
+    /* Motion Photo Slider */
+    .showcase-slider {
       background: var(--soft);
-      border-top: 1px solid var(--border);
       border-bottom: 1px solid var(--border);
-      padding: 18px 0;
+      padding: 28px 22px;
     }
 
-    .slider-track {
-      display: flex;
-      width: max-content;
-      animation: slideStrip 28s linear infinite;
-    }
-
-    .slider-track:hover {
-      animation-play-state: paused;
-    }
-
-    .slide-chip {
-      margin: 0 10px;
-      padding: 10px 18px;
+    .slider-stage {
+      max-width: 920px;
+      margin: 0 auto;
       background: #ffffff;
       border: 1px solid var(--border);
-      border-radius: 999px;
-      font-size: 0.84rem;
-      font-weight: 600;
-      color: var(--ink-2);
-      white-space: nowrap;
+      border-radius: 18px;
+      padding: 16px;
+      box-shadow: 0 10px 28px rgba(15, 23, 42, 0.05);
+    }
+
+    .slide-frame {
+      width: 100%;
+      height: 300px;
+      border-radius: 12px;
+      background: #f1f5f9;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 20px;
+      overflow: hidden;
+      position: relative;
+    }
+
+    .slide-frame img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      border-radius: 10px;
+    }
+
+    .slide-controls {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+      margin-top: 12px;
+      flex-wrap: wrap;
     }
 
     /* Sections */
     section.sec {
-      padding: 64px 24px;
+      padding: 62px 22px;
       border-bottom: 1px solid var(--border);
     }
 
@@ -274,7 +274,7 @@
     }
 
     .sec-head {
-      margin-bottom: 26px;
+      margin-bottom: 24px;
     }
 
     .sec-kicker {
@@ -287,7 +287,7 @@
     }
 
     .sec-title {
-      font-size: clamp(1.45rem, 3vw, 2.1rem);
+      font-size: clamp(1.4rem, 3vw, 2.05rem);
       font-weight: 700;
       color: var(--ink);
     }
@@ -310,12 +310,15 @@
       border-radius: 16px;
       padding: 20px;
       box-shadow: 0 6px 20px rgba(15, 23, 42, 0.04);
-      transition: transform 0.25s ease, box-shadow 0.25s ease;
+      transition: transform 0.25s ease;
     }
 
     .card:hover {
-      transform: translateY(-4px);
-      box-shadow: 0 12px 28px rgba(15, 23, 42, 0.08);
+      transform: translateY(-3px);
+    }
+
+    .card.selectable {
+      cursor: pointer;
     }
 
     .card.featured {
@@ -334,9 +337,9 @@
       text-transform: uppercase;
     }
 
-    .photo-slot {
+    .slot-box {
       width: 100%;
-      height: 195px;
+      height: 190px;
       border-radius: 12px;
       background: var(--soft);
       border: 1px dashed #cbd5e1;
@@ -352,7 +355,7 @@
       cursor: pointer;
     }
 
-    .photo-slot img {
+    .slot-box img {
       width: 100%;
       height: 100%;
       object-fit: cover;
@@ -371,10 +374,18 @@
     }
 
     .price {
-      font-size: 1.45rem;
+      font-size: 1.4rem;
       font-weight: 700;
       color: var(--gold);
-      margin: 10px 0 12px;
+      margin: 8px 0 10px;
+    }
+
+    .pkg-detail-box {
+      margin-top: 20px;
+      padding: 20px;
+      border-radius: 14px;
+      background: #ffffff;
+      border: 1.5px solid var(--gold);
     }
 
     .list {
@@ -552,7 +563,7 @@
 
   <header>
     <a href="#" class="brand-box">
-      <div class="round-logo-sm">
+      <div class="logo-circle-sm">
         <img src="logo.png(1).png" alt="Logo" onerror="if(!this.dataset.f){this.dataset.f='1';this.src='logo.png';}else{this.remove();}" />
         <span>ND</span>
       </div>
@@ -560,47 +571,47 @@
     </a>
     <nav>
       <a href="#about">About</a>
-      <a href="#services">Services</a>
+      <a href="#cameras">Cameras &amp; Gear</a>
       <a href="#portfolio">Portfolio</a>
       <a href="#videos">Videos</a>
       <a href="#packages">Packages</a>
       <a href="#booking">Booking</a>
-      <a href="#reviews">Reviews</a>
       <a href="#contact">Contact</a>
     </nav>
   </header>
 
-  <section class="hero motion-up">
-    <div class="round-logo-lg">
+  <section class="hero">
+    <div class="logo-circle-lg">
       <img src="logo.png(1).png" alt="Nayan Digital Logo" onerror="if(!this.dataset.f){this.dataset.f='1';this.src='logo.png';}else{this.remove();}" />
       <span>ND</span>
     </div>
     <h1>NAYAN DIGITAL PHOTO &amp; VIDEO STUDIO KHAMBALA</h1>
     <div class="hero-tag">"Capturing Your Beautiful Moments Forever."</div>
-    <div class="hero-sub">Wedding • Pre-Wedding • Cinematic Films • Studio &amp; Digital Services</div>
+    <div class="hero-sub">Wedding • Pre-Wedding • Cinematic Films • Drone • Studio &amp; Digital Services</div>
     <div class="btn-group">
       <a href="#booking" class="btn btn-dark">Book Your Event</a>
       <a href="#portfolio" class="btn btn-light">View Our Work</a>
-      <a href="#contact" class="btn btn-wa">Contact Us</a>
+      <a id="heroWaLink" href="#" target="_blank" class="btn btn-wa">WhatsApp: 9923565358</a>
     </div>
   </section>
 
-  <!-- Continuous Motion Strip -->
-  <div class="slider-wrap">
-    <div class="slider-track">
-      <span class="slide-chip">Wedding Photography</span>
-      <span class="slide-chip">Pre-Wedding Shoot</span>
-      <span class="slide-chip">Cinematic Films</span>
-      <span class="slide-chip">Drone &amp; Event Coverage</span>
-      <span class="slide-chip">Photo Studio &amp; Albums</span>
-      <span class="slide-chip">Khambala • Kinwat • Nanded</span>
-      <!-- Duplicate for seamless motion loop -->
-      <span class="slide-chip">Wedding Photography</span>
-      <span class="slide-chip">Pre-Wedding Shoot</span>
-      <span class="slide-chip">Cinematic Films</span>
-      <span class="slide-chip">Drone &amp; Event Coverage</span>
-      <span class="slide-chip">Photo Studio &amp; Albums</span>
-      <span class="slide-chip">Khambala • Kinwat • Nanded</span>
+  <!-- Motion Photo Slider -->
+  <div class="showcase-slider">
+    <div class="slider-stage">
+      <div class="slide-frame" id="slideDisplay">
+        <div id="slideTextBox">
+          <div class="sec-kicker" id="slideCat">SLIDE 1 OF 4 • MOTION SHOWCASE</div>
+          <h3 id="slideHeading" style="font-size:1.5rem; margin:6px 0;">Wedding &amp; Pre-Wedding Motion Showcase</h3>
+          <p id="slideDesc">Upload your own photos to the GitHub repository and add their file names in Owner Admin or index.html to see them slide here.</p>
+        </div>
+      </div>
+      <div class="slide-controls">
+        <div style="display:flex; gap:8px;">
+          <button type="button" class="btn btn-light" onclick="prevSlide()">Prev Slide</button>
+          <button type="button" class="btn btn-dark" onclick="nextSlide()">Next Slide</button>
+        </div>
+        <span style="font-size:0.82rem; color:var(--muted);">Smooth Motion Showcase • Auto &amp; Manual Slide</span>
+      </div>
     </div>
   </div>
 
@@ -613,7 +624,7 @@
       </div>
       <div class="card">
         <p style="color:var(--ink-2); margin-bottom:10px;">
-          We capture your precious moments and transform them into beautiful memories with thoughtful photography, cinematic storytelling, and studio craft.
+          We capture your precious moments and transform them into lasting memories with thoughtful photography, cinematic storytelling, and studio service.
         </p>
         <p style="color:var(--gold); font-weight:600;">
           Location: Khambala, Taluka Kinwat, District Nanded, Maharashtra.
@@ -622,48 +633,36 @@
     </div>
   </section>
 
-  <!-- Our Services -->
-  <section class="sec tinted" id="services">
+  <!-- Cameras & Studio Gear -->
+  <section class="sec tinted" id="cameras">
     <div class="container">
       <div class="sec-head">
-        <div class="sec-kicker">Our Services</div>
-        <h2 class="sec-title">Photography, Films &amp; Studio</h2>
+        <div class="sec-kicker">Equipment &amp; Setup</div>
+        <h2 class="sec-title">Cameras, Drone &amp; Studio Setup</h2>
       </div>
       <div class="grid-3">
         <div class="card">
-          <h3>Wedding Photography</h3>
-          <p>Traditional and candid wedding ceremony moments.</p>
+          <h3>Full-Frame &amp; DSLR Cameras</h3>
+          <p>High-detail still photography and cinematic event coverage with dedicated lenses.</p>
         </div>
         <div class="card">
-          <h3>Wedding Videography</h3>
-          <p>Full event video coverage and clean editing.</p>
+          <h3>Drone &amp; Stabilizer</h3>
+          <p>Aerial coverage and smooth motion shots for weddings, pre-weddings, and events.</p>
         </div>
         <div class="card">
-          <h3>Pre-Wedding Shoot</h3>
-          <p>Outdoor couple sessions and creative frames.</p>
-        </div>
-        <div class="card">
-          <h3>Cinematic Films</h3>
-          <p>Highlight cuts, reels, and film storytelling.</p>
-        </div>
-        <div class="card">
-          <h3>Photo Studio &amp; Albums</h3>
-          <p>Passport photos, prints, frames, and custom albums.</p>
-        </div>
-        <div class="card">
-          <h3>Drone &amp; Digital Desk</h3>
-          <p>Aerial event shots, printing, and digital customer services.</p>
+          <h3>Studio Print &amp; Digital Desk</h3>
+          <p>Passport photos, albums, frames, banner layout design, printing, and customer services.</p>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- Portfolio (Your Own Photos Ready) -->
+  <!-- Portfolio -->
   <section class="sec" id="portfolio">
     <div class="container">
       <div class="sec-head">
         <div class="sec-kicker">Portfolio</div>
-        <h2 class="sec-title">Your Shoot Showcase (Add Your Own Photos)</h2>
+        <h2 class="sec-title">Your Shoot Photos (Add Your Own Images in Repo)</h2>
       </div>
 
       <div class="filters">
@@ -678,48 +677,48 @@
 
       <div class="grid-3">
         <div class="card p-item" data-cat="Wedding">
-          <div class="photo-slot" onclick="handleSlotClick(this, 'Wedding Shoot')">
-            <span>Add Your Wedding Photo Here<br />(Upload image to repo &amp; set src)</span>
+          <div class="slot-box" id="slotWedding" onclick="openSlotPhoto('slotWedding', 'Wedding Shoot')">
+            <span>Your Wedding Photo Slot<br />(Upload photo in GitHub repo &amp; set in Admin)</span>
           </div>
           <h3>Wedding Shoot</h3>
           <p>Category: Wedding</p>
         </div>
 
         <div class="card p-item" data-cat="Pre-Wedding">
-          <div class="photo-slot" onclick="handleSlotClick(this, 'Pre-Wedding Shoot')">
-            <span>Add Your Pre-Wedding Photo Here<br />(Upload image to repo &amp; set src)</span>
+          <div class="slot-box" id="slotPreWed" onclick="openSlotPhoto('slotPreWed', 'Pre-Wedding Shoot')">
+            <span>Your Pre-Wedding Photo Slot<br />(Upload photo in GitHub repo &amp; set in Admin)</span>
           </div>
           <h3>Pre-Wedding Shoot</h3>
           <p>Category: Pre-Wedding</p>
         </div>
 
         <div class="card p-item" data-cat="Haldi">
-          <div class="photo-slot" onclick="handleSlotClick(this, 'Haldi Shoot')">
-            <span>Add Your Haldi Photo Here<br />(Upload image to repo &amp; set src)</span>
+          <div class="slot-box" id="slotHaldi" onclick="openSlotPhoto('slotHaldi', 'Haldi Shoot')">
+            <span>Your Haldi Photo Slot<br />(Upload photo in GitHub repo &amp; set in Admin)</span>
           </div>
           <h3>Haldi Shoot</h3>
           <p>Category: Haldi</p>
         </div>
 
         <div class="card p-item" data-cat="Engagement">
-          <div class="photo-slot" onclick="handleSlotClick(this, 'Engagement Shoot')">
-            <span>Add Your Engagement Photo Here<br />(Upload image to repo &amp; set src)</span>
+          <div class="slot-box" id="slotEng" onclick="openSlotPhoto('slotEng', 'Engagement Shoot')">
+            <span>Your Engagement Photo Slot<br />(Upload photo in GitHub repo &amp; set in Admin)</span>
           </div>
           <h3>Engagement Shoot</h3>
           <p>Category: Engagement</p>
         </div>
 
         <div class="card p-item" data-cat="Birthday">
-          <div class="photo-slot" onclick="handleSlotClick(this, 'Birthday Shoot')">
-            <span>Add Your Birthday Photo Here<br />(Upload image to repo &amp; set src)</span>
+          <div class="slot-box" id="slotBday" onclick="openSlotPhoto('slotBday', 'Birthday Shoot')">
+            <span>Your Birthday Photo Slot<br />(Upload photo in GitHub repo &amp; set in Admin)</span>
           </div>
           <h3>Birthday Shoot</h3>
           <p>Category: Birthday</p>
         </div>
 
         <div class="card p-item" data-cat="Drone & Event">
-          <div class="photo-slot" onclick="handleSlotClick(this, 'Drone & Event Shoot')">
-            <span>Add Your Drone / Event Photo Here<br />(Upload image to repo &amp; set src)</span>
+          <div class="slot-box" id="slotDrone" onclick="openSlotPhoto('slotDrone', 'Drone & Event Shoot')">
+            <span>Your Drone / Event Photo Slot<br />(Upload photo in GitHub repo &amp; set in Admin)</span>
           </div>
           <h3>Drone &amp; Event Shoot</h3>
           <p>Category: Drone &amp; Event</p>
@@ -737,60 +736,67 @@
       </div>
       <div class="grid-2">
         <div class="card">
-          <div class="photo-slot" style="cursor:default;">
-            <span>Wedding Highlights Video Slot<br />Add Your Own Video Link Here</span>
+          <div class="slot-box" style="cursor:default;" id="vidSlot1">
+            <span>Wedding Highlights Video Link Slot<br />Set your video link in Owner Admin or index.html</span>
           </div>
           <h3>Wedding Highlights</h3>
-          <p>Dedicated slot for your own wedding highlight video.</p>
+          <p id="vid1Desc">Add your own wedding highlight video link to show a watch button here.</p>
         </div>
+
         <div class="card">
-          <div class="photo-slot" style="cursor:default;">
-            <span>Pre-Wedding Film Slot<br />Add Your Own Film / Reel Link Here</span>
+          <div class="slot-box" style="cursor:default;" id="vidSlot2">
+            <span>Pre-Wedding Film Link Slot<br />Set your video link in Owner Admin or index.html</span>
           </div>
           <h3>Pre-Wedding Films</h3>
-          <p>Dedicated slot for your own pre-wedding teaser or reel.</p>
+          <p id="vid2Desc">Add your own pre-wedding film or reel link to show a watch button here.</p>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- Packages & Pricing -->
+  <!-- Packages & Pricing (Click any package to see full details) -->
   <section class="sec" id="packages">
     <div class="container">
       <div class="sec-head">
         <div class="sec-kicker">Packages &amp; Pricing</div>
-        <h2 class="sec-title">Our Photography Packages</h2>
+        <h2 class="sec-title">Our Photography Packages (Click Any Package for Details)</h2>
       </div>
       <div class="grid-3">
-        <div class="card">
+        <div class="card selectable" onclick="showPackageDetails('basic')">
           <h3>Basic Package</h3>
-          <div class="price" id="pkgBasicVal">Custom Price</div>
-          <ul class="list">
-            <li>Photography</li>
-            <li>Selected Edited Photos</li>
-            <li>Digital Delivery</li>
-          </ul>
+          <div class="price">Custom Price</div>
+          <p>Click to see included &amp; optional details.</p>
         </div>
-        <div class="card featured">
+
+        <div class="card selectable featured" onclick="showPackageDetails('premium')">
           <span class="badge">Popular</span>
           <h3>Premium Package</h3>
-          <div class="price" id="pkgPremVal">Custom Price</div>
-          <ul class="list">
-            <li>Photography</li>
-            <li>Videography</li>
-            <li>Cinematic Highlights</li>
-            <li>Wedding Album</li>
-          </ul>
+          <div class="price">Custom Price</div>
+          <p>Click to see included &amp; optional details.</p>
         </div>
-        <div class="card">
+
+        <div class="card selectable" onclick="showPackageDetails('luxury')">
           <h3>Luxury Package</h3>
-          <div class="price" id="pkgLuxVal">Custom Price</div>
-          <ul class="list">
-            <li>Complete Wedding Coverage</li>
-            <li>Cinematic Film</li>
-            <li>Pre-Wedding</li>
-            <li>Premium Album</li>
-          </ul>
+          <div class="price">Custom Price</div>
+          <p>Click to see included &amp; optional details.</p>
+        </div>
+      </div>
+
+      <div class="pkg-detail-box" id="pkgDetailsBox">
+        <h3 id="pkgDetailTitle">Package Details — Select Basic, Premium, or Luxury Above</h3>
+        <div class="grid-2" style="margin-top:12px;">
+          <div>
+            <strong style="color:var(--ink); display:block; margin-bottom:6px;">What Is Included:</strong>
+            <ul class="list" id="pkgIncludedList">
+              <li>Click Basic Package, Premium Package, or Luxury Package above to view exact inclusions.</li>
+            </ul>
+          </div>
+          <div>
+            <strong style="color:var(--ink); display:block; margin-bottom:6px;">Extra / Custom Options:</strong>
+            <ul class="list" id="pkgExtraList">
+              <li>Drone coverage, extra album pages, frames, and custom event hours can be requested on WhatsApp.</li>
+            </ul>
+          </div>
         </div>
       </div>
     </div>
@@ -810,7 +816,7 @@
             <input type="text" id="cName" required placeholder="Client's full name" />
           </div>
           <div class="field">
-            <label for="cMobile">2. Customer Mobile Number (Client's Own Number)</label>
+            <label for="cMobile">2. Customer Mobile Number (Client's Number)</label>
             <input type="tel" id="cMobile" required placeholder="Client's 10-digit mobile number" />
           </div>
           <div class="field">
@@ -839,7 +845,7 @@
           </div>
           <div class="field">
             <label for="cMsg">7. Message</label>
-            <textarea id="cMsg" rows="3" placeholder="Package or requirement details"></textarea>
+            <textarea id="cMsg" rows="3" placeholder="Package or extra details"></textarea>
           </div>
           <button type="submit" class="btn btn-wa" style="width:100%;">Confirm &amp; Send on WhatsApp</button>
         </form>
@@ -849,28 +855,8 @@
     </div>
   </section>
 
-  <!-- Customer Reviews -->
-  <section class="sec" id="reviews">
-    <div class="container">
-      <div class="sec-head">
-        <div class="sec-kicker">Customer Reviews</div>
-        <h2 class="sec-title">Client Feedback</h2>
-      </div>
-      <div class="grid-2">
-        <div class="card">
-          <p style="font-style:italic; color:var(--ink-2);">"Beautiful photography and amazing service. Thank you Nayan Digital!"</p>
-          <p style="margin-top:8px; color:var(--gold); font-size:0.85rem; font-weight:600;">— Client Review, Khambala</p>
-        </div>
-        <div class="card">
-          <p style="font-style:italic; color:var(--ink-2);">"Great video highlights and helpful studio support for our event."</p>
-          <p style="margin-top:8px; color:var(--gold); font-size:0.85rem; font-weight:600;">— Client Review, Kinwat</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
   <!-- Contact Us -->
-  <section class="sec tinted" id="contact">
+  <section class="sec" id="contact">
     <div class="container">
       <div class="sec-head">
         <div class="sec-kicker">Contact Us</div>
@@ -880,25 +866,25 @@
         <div class="card">
           <h3>NAYAN DIGITAL PHOTO &amp; VIDEO STUDIO KHAMBALA</h3>
           <p style="margin-bottom:8px;"><strong>Address:</strong> Khambala, Taluka Kinwat, District Nanded, Maharashtra</p>
-          <p style="margin-bottom:8px;" id="dispStudioWa"><strong>Studio WhatsApp:</strong> Set in Owner Admin or Code</p>
-          <p style="margin-bottom:8px;" id="dispStudioEmail"><strong>Email:</strong> Set in Owner Admin or Code</p>
+          <p style="margin-bottom:8px;" id="dispWa"><strong>WhatsApp / Mobile:</strong> +91 9923565358</p>
+          <p style="margin-bottom:8px;" id="dispEmail"><strong>Studio Email:</strong> Set in Owner Admin or Code</p>
           <p style="margin-bottom:14px;"><strong>Social:</strong> Instagram • YouTube • WhatsApp</p>
           <a href="https://www.google.com/maps/search/?api=1&query=Khambala+Kinwat+Nanded+Maharashtra" target="_blank" class="btn btn-dark">Open Google Maps</a>
         </div>
         <div class="card">
-          <h3>Direct WhatsApp Button</h3>
-          <p style="margin-bottom:14px;">Start a direct WhatsApp conversation with the studio for bookings, albums, frames, or inquiries.</p>
-          <a id="contactWaLink" href="#booking" class="btn btn-wa">Chat on WhatsApp</a>
+          <h3>Direct WhatsApp Connect</h3>
+          <p style="margin-bottom:14px;">Click below to open WhatsApp directly with Nayan Digital Photo &amp; Video Studio Khambala.</p>
+          <a id="contactWaLink" href="#" target="_blank" class="btn btn-wa">Chat on WhatsApp</a>
         </div>
       </div>
 
-      <!-- Hidden Owner-Only Panel (Only visible after PIN) -->
+      <!-- Owner-Only Panel (PIN: Roshan@2026) -->
       <div id="ownerBox">
         <div class="sec-kicker">Owner Only • Hidden From Clients</div>
-        <h3 style="margin-bottom:12px;">Studio Settings (Browser Preview)</h3>
+        <h3 style="margin-bottom:12px;">Owner Studio Settings (Browser Preview)</h3>
         <div class="grid-2">
           <div class="field">
-            <label>Studio WhatsApp Number (91 + 10 digits)</label>
+            <label>Studio WhatsApp (91 + 10 digits)</label>
             <input type="text" id="setWa" />
           </div>
           <div class="field">
@@ -906,23 +892,31 @@
             <input type="text" id="setEmail" />
           </div>
           <div class="field">
-            <label>Tagline</label>
-            <input type="text" id="setTag" />
+            <label>Logo Angle (-90deg / 0deg / 90deg / 180deg)</label>
+            <input type="text" id="setAngle" />
           </div>
           <div class="field">
-            <label>Logo Angle (-90deg / 0deg / 90deg / 180deg)</label>
-            <input type="text" id="setRot" />
+            <label>Wedding Photo File Name (in repo, e.g. wedding.jpg)</label>
+            <input type="text" id="setPhoto1" />
+          </div>
+          <div class="field">
+            <label>Pre-Wedding Photo File Name (e.g. prewed.jpg)</label>
+            <input type="text" id="setPhoto2" />
+          </div>
+          <div class="field">
+            <label>Highlight Video Link (URL)</label>
+            <input type="text" id="setVid1" />
           </div>
         </div>
         <div style="display:flex; gap:10px; flex-wrap:wrap;">
-          <button type="button" class="btn btn-dark" onclick="saveOwnerSet()">Apply Settings</button>
-          <button type="button" class="btn btn-light" onclick="hideOwnerSet()">Hide Panel</button>
+          <button type="button" class="btn btn-dark" onclick="saveOwnerData()">Save Settings</button>
+          <button type="button" class="btn btn-light" onclick="closeOwnerBox()">Hide Panel</button>
         </div>
       </div>
     </div>
   </section>
 
-  <a id="waFloat" class="wa-float" href="#booking">WhatsApp</a>
+  <a id="waFloat" class="wa-float" href="#" target="_blank">WhatsApp</a>
 
   <div class="modal" id="photoModal" onclick="closeModal(event)">
     <div class="modal-inner">
@@ -934,50 +928,138 @@
 
   <footer>
     <div>NAYAN DIGITAL PHOTO &amp; VIDEO STUDIO KHAMBALA • NANDED, MAHARASHTRA</div>
-    <button type="button" class="owner-btn" onclick="openOwnerSet()">Owner Admin</button>
+    <button type="button" class="owner-btn" onclick="openOwnerBox()">Owner Admin</button>
   </footer>
 
   <script>
-    const OWNER_PIN = "2026";
-    // Replace with YOUR studio WhatsApp number (91 + 10-digit number) so client bookings come to you
-    const STUDIO_WHATSAPP = "910000000000";
+    const OWNER_PIN = "Roshan@2026";
+    const STUDIO_WA = "919923565358";
+    const STUDIO_EMAIL = "Update Studio Email";
 
-    const defaults = {
-      wa: STUDIO_WHATSAPP,
-      email: "Not set",
-      tag: '"Capturing Your Beautiful Moments Forever."',
-      rot: "-90deg"
+    const packageInfo = {
+      basic: {
+        title: "Basic Package — Details",
+        inc: [
+          "Event photography coverage",
+          "Selected color-edited photos",
+          "Digital delivery"
+        ],
+        ext: [
+          "Extra event hours or additional photographers available on request",
+          "Printed albums and frames can be added separately"
+        ]
+      },
+      premium: {
+        title: "Premium Package (Popular) — Details",
+        inc: [
+          "Wedding photography & videography",
+          "Cinematic highlights",
+          "Custom designed wedding album"
+        ],
+        ext: [
+          "Drone shots and pre-wedding sessions available as add-ons",
+          "Custom layout and extra album sheets on request"
+        ]
+      },
+      luxury: {
+        title: "Luxury Package — Details",
+        inc: [
+          "Complete wedding coverage",
+          "Cinematic film & pre-wedding shoot",
+          "Premium wedding album"
+        ],
+        ext: [
+          "Tailored schedule, extra reels, and gift frames available",
+          "Final details confirmed directly on WhatsApp"
+        ]
+      }
     };
 
-    function loadCfg() {
+    const slides = [
+      { cat: "SLIDE 1 OF 4 • WEDDING", title: "Wedding Moments Showcase", desc: "Add your own wedding photo file in Owner Admin or index.html to display here." },
+      { cat: "SLIDE 2 OF 4 • PRE-WEDDING", title: "Pre-Wedding Stories Showcase", desc: "Add your own pre-wedding photo file in Owner Admin or index.html to display here." },
+      { cat: "SLIDE 3 OF 4 • CINEMA & DRONE", title: "Cinematic Films & Drone Angles", desc: "Highlight reels, event coverage, and aerial perspectives." },
+      { cat: "SLIDE 4 OF 4 • STUDIO KHAMBALA", title: "Nayan Digital Photo & Video Studio", desc: "Khambala, Taluka Kinwat, District Nanded • WhatsApp: 9923565358" }
+    ];
+
+    let slideIdx = 0;
+
+    function renderSlide() {
+      const s = slides[slideIdx];
+      document.getElementById("slideCat").innerText = s.cat;
+      document.getElementById("slideHeading").innerText = s.title;
+      document.getElementById("slideDesc").innerText = s.desc;
+    }
+
+    function nextSlide() {
+      slideIdx = (slideIdx + 1) % slides.length;
+      renderSlide();
+    }
+
+    function prevSlide() {
+      slideIdx = (slideIdx - 1 + slides.length) % slides.length;
+      renderSlide();
+    }
+
+    setInterval(nextSlide, 4500);
+
+    function showPackageDetails(key) {
+      const p = packageInfo[key];
+      document.getElementById("pkgDetailTitle").innerText = p.title;
+      document.getElementById("pkgIncludedList").innerHTML = p.inc.map(x => `<li>${x}</li>`).join("");
+      document.getElementById("pkgExtraList").innerHTML = p.ext.map(x => `<li>${x}</li>`).join("");
+      document.getElementById("pkgDetailsBox").scrollIntoView({ behavior: "smooth", block: "nearest" });
+    }
+
+    const baseCfg = {
+      wa: STUDIO_WA,
+      email: STUDIO_EMAIL,
+      angle: "-90deg",
+      photo1: "",
+      photo2: "",
+      vid1: ""
+    };
+
+    function getCfg() {
       try {
-        return { ...defaults, ...(JSON.parse(localStorage.getItem("nd_white_cfg")) || {}) };
+        return { ...baseCfg, ...(JSON.parse(localStorage.getItem("nd_studio_final")) || {}) };
       } catch (e) {
-        return defaults;
+        return baseCfg;
       }
     }
 
     function applyCfg() {
-      const cfg = loadCfg();
-      document.documentElement.style.setProperty("--logo-rot", cfg.rot);
-      document.querySelector(".hero-tag").innerText = cfg.tag;
-      document.getElementById("dispStudioEmail").innerHTML = `<strong>Email:</strong> ${cfg.email}`;
-      if (cfg.wa !== "910000000000") {
-        document.getElementById("dispStudioWa").innerHTML = `<strong>Studio WhatsApp:</strong> +${cfg.wa}`;
+      const c = getCfg();
+      document.documentElement.style.setProperty("--logo-angle", c.angle);
+      document.getElementById("dispWa").innerHTML = `<strong>WhatsApp / Mobile:</strong> +${c.wa}`;
+      document.getElementById("dispEmail").innerHTML = `<strong>Studio Email:</strong> ${c.email}`;
+
+      const waUrl = `https://wa.me/${c.wa}?text=${encodeURIComponent("Hello Nayan Digital Photo & Video Studio Khambala, I want to inquire.")}`;
+      document.getElementById("heroWaLink").href = waUrl;
+      document.getElementById("contactWaLink").href = waUrl;
+      document.getElementById("waFloat").href = waUrl;
+
+      if (c.photo1) {
+        document.getElementById("slotWedding").innerHTML = `<img src="${c.photo1}" alt="Wedding Photo" />`;
       }
-      const waLink = `https://wa.me/${cfg.wa}?text=${encodeURIComponent("Hello Nayan Digital Photo & Video Studio Khambala, I want to inquire.")}`;
-      document.getElementById("waFloat").href = waLink;
-      document.getElementById("contactWaLink").href = waLink;
+      if (c.photo2) {
+        document.getElementById("slotPreWed").innerHTML = `<img src="${c.photo2}" alt="Pre-Wedding Photo" />`;
+      }
+      if (c.vid1) {
+        document.getElementById("vid1Desc").innerHTML = `<a href="${c.vid1}" target="_blank" class="btn btn-dark" style="margin-top:8px;">Watch Video</a>`;
+      }
     }
 
-    function openOwnerSet() {
+    function openOwnerBox() {
       const pin = prompt("Enter Owner PIN:");
       if (pin === OWNER_PIN) {
-        const cfg = loadCfg();
-        document.getElementById("setWa").value = cfg.wa;
-        document.getElementById("setEmail").value = cfg.email;
-        document.getElementById("setTag").value = cfg.tag;
-        document.getElementById("setRot").value = cfg.rot;
+        const c = getCfg();
+        document.getElementById("setWa").value = c.wa;
+        document.getElementById("setEmail").value = c.email;
+        document.getElementById("setAngle").value = c.angle;
+        document.getElementById("setPhoto1").value = c.photo1;
+        document.getElementById("setPhoto2").value = c.photo2;
+        document.getElementById("setVid1").value = c.vid1;
         const box = document.getElementById("ownerBox");
         box.classList.add("open");
         box.scrollIntoView({ behavior: "smooth" });
@@ -986,19 +1068,21 @@
       }
     }
 
-    function saveOwnerSet() {
-      const next = {
-        wa: document.getElementById("setWa").value.trim() || defaults.wa,
-        email: document.getElementById("setEmail").value.trim() || defaults.email,
-        tag: document.getElementById("setTag").value.trim() || defaults.tag,
-        rot: document.getElementById("setRot").value.trim() || defaults.rot
+    function saveOwnerData() {
+      const updated = {
+        wa: document.getElementById("setWa").value.trim() || STUDIO_WA,
+        email: document.getElementById("setEmail").value.trim() || STUDIO_EMAIL,
+        angle: document.getElementById("setAngle").value.trim() || "-90deg",
+        photo1: document.getElementById("setPhoto1").value.trim(),
+        photo2: document.getElementById("setPhoto2").value.trim(),
+        vid1: document.getElementById("setVid1").value.trim()
       };
-      localStorage.setItem("nd_white_cfg", JSON.stringify(next));
+      localStorage.setItem("nd_studio_final", JSON.stringify(updated));
       applyCfg();
-      alert("Saved in this browser.");
+      alert("Settings saved in this browser.");
     }
 
-    function hideOwnerSet() {
+    function closeOwnerBox() {
       document.getElementById("ownerBox").classList.remove("open");
     }
 
@@ -1010,8 +1094,8 @@
       });
     }
 
-    function handleSlotClick(slotEl, label) {
-      const img = slotEl.querySelector("img");
+    function openSlotPhoto(slotId, label) {
+      const img = document.querySelector(`#${slotId} img`);
       if (img && img.src) {
         document.getElementById("modalImg").src = img.src;
         document.getElementById("modalCaption").innerText = label;
@@ -1027,7 +1111,7 @@
 
     function sendClientBooking(e) {
       e.preventDefault();
-      const cfg = loadCfg();
+      const c = getCfg();
       const name = document.getElementById("cName").value.trim();
       const mobile = document.getElementById("cMobile").value.trim();
       const email = document.getElementById("cEmail").value.trim() || "Not provided";
@@ -1040,9 +1124,9 @@
       box.classList.add("show");
       box.innerHTML =
         `<strong>Booking Details Ready (Status: Pending Studio Confirmation)</strong><br>` +
-        `Client Name: ${name} | Client Mobile: ${mobile} | Event: ${eventType} | Date: ${date} | Location: ${loc}`;
+        `Client: ${name} | Client Mobile: ${mobile} | Event: ${eventType} | Date: ${date} | Location: ${loc}`;
 
-      const fullDetails =
+      const waMsg =
         `NEW BOOKING — NAYAN DIGITAL PHOTO & VIDEO STUDIO KHAMBALA\n` +
         `Client Name: ${name}\n` +
         `Client Mobile: ${mobile}\n` +
@@ -1052,9 +1136,10 @@
         `Event Location: ${loc}\n` +
         `Message: ${msg}`;
 
-      window.open(`https://wa.me/${cfg.wa}?text=${encodeURIComponent(fullDetails)}`, "_blank");
+      window.open(`https://wa.me/${c.wa}?text=${encodeURIComponent(waMsg)}`, "_blank");
     }
 
+    renderSlide();
     applyCfg();
   </script>
 </body>
