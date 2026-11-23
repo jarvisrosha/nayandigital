@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="mr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>नयन डिजिटल | Nayan Digital Photo &amp; Video Studio</title>
+  <style>
+    :root {
+      --bg: #050811;
+      --surface: #0d1424;
+      --surface-2: #131d33;
+      --accent: #38bdf8;
+      --text: #f8fafc;
+      --muted: #94a3b8;
+      --border: rgba(148, 163, 184, 0.18);
+      --wa: #22c55e;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; font-family: "Segoe UI", system-ui, sans-serif; scroll-behavior: smooth; }
+    body { background: radial-gradient(circle at top center, #102040 0%, var(--bg) 52%); color: var(--text); line-height: 1.65; overflow-x: hidden; }
+    .topbar { position: sticky; top: 0; z-index: 50; background: rgba(5, 8, 17, 0.9); backdrop-filter: blur(10px); border-bottom: 1px solid var(--border); padding: 12px 18px; display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 12px; }
+    .brand-left { display: flex; align-items: center; gap: 12px; }
+    .custom-logo { width: 44px; height: 44px; border-radius: 10px; object-fit: cover; border: 1.5px solid var(--accent); background: var(--surface-2); }
+    .brand-name-top { font-size: 1.15rem; font-weight: 800; color: var(--accent); }
+    .nav-links { display: flex; flex-wrap: wrap; gap: 14px; font-size: 0.92rem; }
+    .nav-links a { color: var(--text); text-decoration: none; }
+    .nav-links a:hover { color: var(--accent); }
+    .hero { text-align: center; padding: 54px 18px 42px; max-width: 960px; margin: 0 auto; }
+    .hero-logo { width: 108px; height: 108px; border-radius: 22px; object-fit: cover; border: 2px solid var(--accent); box-shadow: 0 12px 30px rgba(56, 189, 248, 0.25); margin-bottom: 16px; background: var(--surface); }
+    .hero h1 { font-size: clamp(2.1rem, 6vw, 3.5rem); font-weight: 900; color: var(--accent); margin-bottom: 6px; }
+    .hero .sub { color: #cbd5e1; font-size: clamp(0.95rem, 2.4vw, 1.2rem); margin-bottom: 14px; }
+    .contact-strip { display: inline-flex; flex-wrap: wrap; justify-content: center; gap: 12px; background: var(--surface); border: 1px solid var(--border); padding: 10px 18px; border-radius: 999px; margin-bottom: 24px; font-size: 0.95rem; }
+    .contact-strip span { color: var(--accent); font-weight: 700; }
+    .hero-actions { display: flex; flex-wrap: wrap; justify-content: center; gap: 12px; }
+    .btn-primary { background: var(--wa); color: #041409; padding: 13px 22px; border-radius: 10px; font-weight: 800; text-decoration: none; }
+    .btn-sec { background: var(--surface-2); color: var(--text); border: 1px solid var(--border); padding: 13px 20px; border-radius: 10px; font-weight: 600; text-decoration: none; }
+    .wrap { max-width: 1100px; margin: 0 auto; padding: 20px 18px 56px; }
+    .sec-title { font-size: clamp(1.4rem, 3.2vw, 1.9rem); color: var(--accent); margin: 34px 0 18px; padding-left: 12px; border-left: 4px solid var(--accent); }
+    .grid-3 { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 18px; }
+    .grid-2 { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 18px; }
+    .card { background: var(--surface); border: 1px solid var(--border); border-radius: 14px; padding: 18px; }
+    .card h3 { color: #e0f2fe; margin-bottom: 8px; font-size: 1.1rem; }
+    .card p { color: var(--muted); font-size: 0.93rem; }
+    .demo-img { width: 100%; height: 200px; object-fit: cover; border-radius: 10px; margin-bottom: 12px; background: var(--surface-2); border: 1px solid var(--border); }
+    .video-box { position: relative; width: 100%; padding-top: 56.25%; border-radius: 10px; overflow: hidden; background: #020409; border: 1px solid var(--border); margin-bottom: 12px; }
+    .video-box iframe { position: absolute; inset: 0; width: 100%; height: 100%; border: 0; }
+    ul.list-clean { list-style: none; display: grid; gap: 8px; color: #cbd5e1; font-size: 0.95rem; }
+    ul.list-clean li::before { content: "✓ "; color: var(--accent); font-weight: 700; }
+    .form-card { background: var(--surface); border: 1px solid var(--border); border-radius: 16px; padding: 24px; max-width: 700px; }
+    .field { margin-bottom: 14px; }
+    .field label { display: block; margin-bottom: 6px; font-size: 0.92rem; color: #e2e8f0; }
+    .field input, .field select, .field textarea { width: 100%; padding: 11px 13px; border-radius: 8px; border: 1px solid var(--border); background: #060a14; color: var(--text); font-size: 0.98rem; }
+    .submit-btn { width: 100%; padding: 13px; border: 0; border-radius: 10px; background: var(--wa); color: #041409; font-weight: 800; font-size: 1rem; cursor: pointer; }
+    footer { text-align: center; padding: 26px 16px; border-top: 1px solid var(--border); color: var(--muted); font-size: 0.88rem; }
+  </style>
+</head>
+<body>
+
+  <div class="topbar">
+    <div class="brand-left">
+      <img src="logo.png(1).png" alt="Nayan Digital Logo" class="custom-logo" onerror="this.style.display='none'" />
+      <span class="brand-name-top">नयन डिजिटल</span>
+    </div>
+    <nav class="nav-links">
+      <a href="#photo-demos">फोटो डेमो</a>
+      <a href="#video-demos">व्हिडिओ डेमो</a>
+      <a href="#studio-items">गॅलरी व सेवा</a>
+      <a href="#booking">संपर्क व बुकिंग</a>
+    </nav>
+  </div>
+
+  <section class="hero">
+    <img src="logo.png(1).png" alt="नयन डिजिटल लोगो" class="hero-logo" onerror="this.style.display='none'" />
+    <h1>नयन डिजिटल</h1>
+    <div class="sub">Nayan Digital Photo &amp; Video Studio • खंबाळा, किनवट, नांदेड</div>
+
+    <div class="contact-strip">
+      <span>📞 संपर्क क्रमांक (पुढे अपडेट करू)</span>
+      <span>•</span>
+      <span>📍 खंबाळा (ता. किनवट, जि. नांदेड)</span>
+    </div>
+
+    <div class="hero-actions">
+      <a id="waDirect" class="btn-primary" href="#booking">WhatsApp वर बुकिंग करा</a>
+      <a class="btn-sec" href="#photo-demos">डेमो पाहा (Swipe / Scroll)</a>
+    </div>
+  </section>
+
+  <main class="wrap">
+    <h2 class="sec-title" id="photo-demos">फोटो डेमो (Photo Demos)</h2>
+    <div class="grid-3">
+      <div class="card">
+        <img class="demo-img" src="https://images.unsplash.com/photo-1519741497674-611481863552?auto=format&fit=crop&w=800&q=80" alt="Wedding Photo Demo" />
+        <h3>लग्नसोहळा फोटोग्राफी डेमो</h3>
+        <p>पारंपरिक व कँडिड वेडिंग शॉट्स, हाय-रिझोल्यूशन क्वालिटी आणि आकर्षक कलर टोन.</p>
+      </div>
+      <div class="card">
+        <img class="demo-img" src="https://images.unsplash.com/photo-1537633552985-df8429e8048b?auto=format&fit=crop&w=800&q=80" alt="Pre-Wedding Demo" />
+        <h3>प्री-वेडिंग / कपल शूट डेमो</h3>
+        <p>निसर्गरम्य लोकेशन्स, क्रिएटिव्ह पोझ आणि प्रीमियम फ्रेमिंग स्टाईल.</p>
+      </div>
+      <div class="card">
+        <img class="demo-img" src="https://images.unsplash.com/photo-1473968512647-3e447244af8f?auto=format&fit=crop&w=800&q=80" alt="Drone & Event Demo" />
+        <h3>ड्रोन व इव्हेंट कव्हरेज डेमो</h3>
+        <p>आकाशातील विहंगम शॉट्स, सांस्कृतिक व कौटुंबिक कार्यक्रमांचे सविस्तर कव्हरेज.</p>
+      </div>
+    </div>
+
+    <h2 class="sec-title" id="video-demos">व्हिडिओ डेमो (Video Demos)</h2>
+    <div class="grid-2">
+      <div class="card">
+        <div class="video-box">
+          <iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ" title="Wedding & Drone Video Demo" allowfullscreen></iframe>
+        </div>
+        <h3>सिनेमॅटिक टीझर व ड्रोन व्हिडिओ डेमो</h3>
+        <p>येथे तुमचा स्वतःचा YouTube किंवा Highlight व्हिडिओ सहज जोडू शकता.</p>
+      </div>
+      <div class="card">
+        <div class="video-box">
+          <iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ" title="Event Highlight Video Demo" allowfullscreen></iframe>
+        </div>
+        <h3>इव्हेंट हायलाइट्स व रील डेमो</h3>
+        <p>लग्न, वाढदिवस किंवा विशेष कार्यक्रमांची व्हिडिओ झलक.</p>
+      </div>
+    </div>
+
+    <h2 class="sec-title" id="studio-items">गॅलरी आणि स्टुडिओमध्ये काय-काय मिळते?</h2>
+    <div class="grid-2">
+      <div class="card">
+        <h3>फोटोग्राफी, व्हिडिओ व गॅलरी सुविधा</h3>
+        <ul class="list-clean">
+          <li>वेडिंग, प्री-वेडिंग व इव्हेंट फोटो-व्हिडिओ शूट</li>
+          <li>ड्रोन व्हिडिओग्राफी व सिनेमॅटिक एडिटिंग</li>
+          <li>फोटो अल्बम डिझायनिंग व प्रिंटिंग</li>
+          <li>फोटो फ्रेम्स, गिफ्ट फ्रेम्स व स्टुडिओ पोर्ट्रेट</li>
+          <li>बॅनर, पोस्टर व ग्राफिक लेआउट डिझाइन</li>
+        </ul>
+      </div>
+      <div class="card">
+        <h3>स्टुडिओ प्रिंटिंग व डिजिटल सेवा</h3>
+        <ul class="list-clean">
+          <li>पासपोर्ट साईझ फोटो व त्वरित प्रिंटिंग</li>
+          <li>झेरॉक्स, प्रिंटआऊट व स्कॅनिंग सुविधा</li>
+          <li>मोबाईल अ‍ॅक्सेसरीज व आवश्यक साहित्य</li>
+          <li>ऑनलाइन अर्ज, KYC व डिजिटल ग्राहक सेवा</li>
+          <li>वेळेवर व विश्वासार्ह डिलिव्हरी</li>
+        </ul>
+      </div>
+    </div>
+
+    <h2 class="sec-title" id="booking">संपर्क आणि थेट WhatsApp बुकिंग</h2>
+    <div class="grid-2">
+      <div class="form-card">
+        <form onsubmit="bookOnWA(event)">
+          <div class="field">
+            <label>तुमचे नाव</label>
+            <input type="text" id="bName" required placeholder="नाव टाका" />
+          </div>
+          <div class="field">
+            <label>तुमचा मोबाईल नंबर</label>
+            <input type="tel" id="bPhone" required placeholder="10 अंकी नंबर" />
+          </div>
+          <div class="field">
+            <label>आवश्यक सेवा / डेमो</label>
+            <select id="bService">
+              <option>वेडिंग / प्री-वेडिंग शूट</option>
+              <option>ड्रोन / व्हिडिओग्राफी</option>
+              <option>अल्बम / फ्रेम / फोटो प्रिंट</option>
+              <option>स्टुडिओ / झेरॉक्स / डिजिटल सेवा</option>
+            </select>
+          </div>
+          <div class="field">
+            <label>इव्हेंट तारीख व माहिती</label>
+            <textarea id="bMsg" rows="3" placeholder="तारीख, गाव किंवा इतर तपशील..."></textarea>
+          </div>
+          <button type="submit" class="submit-btn">WhatsApp वर बुकिंग पाठवा</button>
+        </form>
+      </div>
+
+      <div class="card">
+        <h3>थेट संपर्क तपशील</h3>
+        <p style="margin-bottom:12px;"><strong>स्टुडिओ:</strong> नयन डिजिटल (Nayan Digital Photo &amp; Video Studio)</p>
+        <p style="margin-bottom:12px;"><strong>पत्ता:</strong> खंबाळा, ता. किनवट, जि. नांदेड</p>
+        <p style="margin-bottom:16px;"><strong>संपर्क:</strong> थेट WhatsApp बुकिंग फॉर्मवरून मेसेज पाठवा</p>
+      </div>
+    </div>
+  </main>
+
+  <footer>
+    © 2026 नयन डिजिटल (Nayan Digital) • सर्व हक्क राखीव
+  </footer>
+
+  <script>
+    const WA_NO = "910000000000";
+    function bookOnWA(e) {
+      e.preventDefault();
+      const name = document.getElementById("bName").value.trim();
+      const phone = document.getElementById("bPhone").value.trim();
+      const srv = document.getElementById("bService").value;
+      const msg = document.getElementById("bMsg").value.trim() || "काही नाही";
+      const text = `नमस्कार नयन डिजिटल,\nनाव: ${name}\nमोबाईल: ${phone}\nसेवा: ${srv}\nतपशील: ${msg}`;
+      window.open(`https://wa.me/${WA_NO}?text=${encodeURIComponent(text)}`, "_blank");
+    }
+  </script>
+</body>
+</html>
