@@ -3,202 +3,566 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>नयन डिजिटल | Nayan Digital Photo &amp; Video Studio</title>
+  <title>Nayan Digital | नयन डिजिटल | नयन डिजिटल</title>
   <style>
     :root {
-      --bg: #050811;
-      --surface: #0d1424;
-      --surface-2: #131d33;
-      --accent: #38bdf8;
-      --text: #f8fafc;
+      --bg: #07090f;
+      --card: #111622;
+      --card-2: #171e2e;
+      --gold: #f5b942;
+      --blue: #38bdf8;
+      --text: #f1f5f9;
       --muted: #94a3b8;
-      --border: rgba(148, 163, 184, 0.18);
+      --line: rgba(255, 255, 255, 0.1);
       --wa: #22c55e;
     }
-    * { box-sizing: border-box; margin: 0; padding: 0; font-family: "Segoe UI", system-ui, sans-serif; scroll-behavior: smooth; }
-    body { background: radial-gradient(circle at top center, #102040 0%, var(--bg) 52%); color: var(--text); line-height: 1.65; overflow-x: hidden; }
-    .topbar { position: sticky; top: 0; z-index: 50; background: rgba(5, 8, 17, 0.9); backdrop-filter: blur(10px); border-bottom: 1px solid var(--border); padding: 12px 18px; display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 12px; }
-    .brand-left { display: flex; align-items: center; gap: 12px; }
-    .custom-logo { width: 44px; height: 44px; border-radius: 10px; object-fit: cover; border: 1.5px solid var(--accent); background: var(--surface-2); }
-    .brand-name-top { font-size: 1.15rem; font-weight: 800; color: var(--accent); }
-    .nav-links { display: flex; flex-wrap: wrap; gap: 14px; font-size: 0.92rem; }
-    .nav-links a { color: var(--text); text-decoration: none; }
-    .nav-links a:hover { color: var(--accent); }
-    .hero { text-align: center; padding: 54px 18px 42px; max-width: 960px; margin: 0 auto; }
-    .hero-logo { width: 108px; height: 108px; border-radius: 22px; object-fit: cover; border: 2px solid var(--accent); box-shadow: 0 12px 30px rgba(56, 189, 248, 0.25); margin-bottom: 16px; background: var(--surface); }
-    .hero h1 { font-size: clamp(2.1rem, 6vw, 3.5rem); font-weight: 900; color: var(--accent); margin-bottom: 6px; }
-    .hero .sub { color: #cbd5e1; font-size: clamp(0.95rem, 2.4vw, 1.2rem); margin-bottom: 14px; }
-    .contact-strip { display: inline-flex; flex-wrap: wrap; justify-content: center; gap: 12px; background: var(--surface); border: 1px solid var(--border); padding: 10px 18px; border-radius: 999px; margin-bottom: 24px; font-size: 0.95rem; }
-    .contact-strip span { color: var(--accent); font-weight: 700; }
-    .hero-actions { display: flex; flex-wrap: wrap; justify-content: center; gap: 12px; }
-    .btn-primary { background: var(--wa); color: #041409; padding: 13px 22px; border-radius: 10px; font-weight: 800; text-decoration: none; }
-    .btn-sec { background: var(--surface-2); color: var(--text); border: 1px solid var(--border); padding: 13px 20px; border-radius: 10px; font-weight: 600; text-decoration: none; }
-    .wrap { max-width: 1100px; margin: 0 auto; padding: 20px 18px 56px; }
-    .sec-title { font-size: clamp(1.4rem, 3.2vw, 1.9rem); color: var(--accent); margin: 34px 0 18px; padding-left: 12px; border-left: 4px solid var(--accent); }
-    .grid-3 { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 18px; }
-    .grid-2 { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 18px; }
-    .card { background: var(--surface); border: 1px solid var(--border); border-radius: 14px; padding: 18px; }
-    .card h3 { color: #e0f2fe; margin-bottom: 8px; font-size: 1.1rem; }
-    .card p { color: var(--muted); font-size: 0.93rem; }
-    .demo-img { width: 100%; height: 200px; object-fit: cover; border-radius: 10px; margin-bottom: 12px; background: var(--surface-2); border: 1px solid var(--border); }
-    .video-box { position: relative; width: 100%; padding-top: 56.25%; border-radius: 10px; overflow: hidden; background: #020409; border: 1px solid var(--border); margin-bottom: 12px; }
-    .video-box iframe { position: absolute; inset: 0; width: 100%; height: 100%; border: 0; }
-    ul.list-clean { list-style: none; display: grid; gap: 8px; color: #cbd5e1; font-size: 0.95rem; }
-    ul.list-clean li::before { content: "✓ "; color: var(--accent); font-weight: 700; }
-    .form-card { background: var(--surface); border: 1px solid var(--border); border-radius: 16px; padding: 24px; max-width: 700px; }
-    .field { margin-bottom: 14px; }
-    .field label { display: block; margin-bottom: 6px; font-size: 0.92rem; color: #e2e8f0; }
-    .field input, .field select, .field textarea { width: 100%; padding: 11px 13px; border-radius: 8px; border: 1px solid var(--border); background: #060a14; color: var(--text); font-size: 0.98rem; }
-    .submit-btn { width: 100%; padding: 13px; border: 0; border-radius: 10px; background: var(--wa); color: #041409; font-weight: 800; font-size: 1rem; cursor: pointer; }
-    footer { text-align: center; padding: 26px 16px; border-top: 1px solid var(--border); color: var(--muted); font-size: 0.88rem; }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: "Segoe UI", system-ui, -apple-system, sans-serif;
+      scroll-behavior: smooth;
+    }
+
+    body {
+      background: linear-gradient(180deg, #0b101d 0%, var(--bg) 45%);
+      color: var(--text);
+      line-height: 1.65;
+    }
+
+    /* Header */
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 40;
+      background: rgba(7, 9, 15, 0.92);
+      backdrop-filter: blur(10px);
+      border-bottom: 1px solid var(--line);
+      padding: 12px 18px;
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+    }
+
+    .brand-bar {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .brand-bar img {
+      width: 40px;
+      height: 40px;
+      border-radius: 8px;
+      object-fit: cover;
+      border: 1px solid var(--gold);
+    }
+
+    .brand-bar strong {
+      font-size: 1.15rem;
+      color: var(--gold);
+      letter-spacing: 0.4px;
+    }
+
+    .lang-switch {
+      display: flex;
+      gap: 6px;
+      background: var(--card);
+      padding: 4px;
+      border-radius: 8px;
+      border: 1px solid var(--line);
+    }
+
+    .lang-btn {
+      background: transparent;
+      color: var(--muted);
+      border: 0;
+      padding: 6px 11px;
+      border-radius: 6px;
+      font-size: 0.85rem;
+      font-weight: 700;
+      cursor: pointer;
+    }
+
+    .lang-btn.active {
+      background: var(--gold);
+      color: #090c14;
+    }
+
+    /* Hero */
+    .hero {
+      max-width: 980px;
+      margin: 0 auto;
+      padding: 56px 18px 40px;
+      text-align: center;
+    }
+
+    .hero-logo {
+      width: 96px;
+      height: 96px;
+      border-radius: 18px;
+      object-fit: cover;
+      border: 2px solid var(--gold);
+      margin-bottom: 14px;
+    }
+
+    .hero h1 {
+      font-size: clamp(2rem, 5.5vw, 3.3rem);
+      font-weight: 900;
+      color: #ffffff;
+      margin-bottom: 8px;
+    }
+
+    .hero h1 span {
+      color: var(--gold);
+    }
+
+    .hero p {
+      color: var(--muted);
+      max-width: 700px;
+      margin: 0 auto 22px;
+      font-size: 1.02rem;
+    }
+
+    .actions {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 12px;
+    }
+
+    .btn-wa {
+      background: var(--wa);
+      color: #05160b;
+      text-decoration: none;
+      padding: 12px 22px;
+      border-radius: 8px;
+      font-weight: 800;
+    }
+
+    .btn-ghost {
+      background: var(--card);
+      color: var(--text);
+      text-decoration: none;
+      padding: 12px 20px;
+      border-radius: 8px;
+      border: 1px solid var(--line);
+      font-weight: 600;
+    }
+
+    /* Container */
+    .wrap {
+      max-width: 1120px;
+      margin: 0 auto;
+      padding: 16px 18px 60px;
+    }
+
+    .sec-title {
+      font-size: clamp(1.35rem, 3vw, 1.8rem);
+      color: var(--gold);
+      margin: 34px 0 16px;
+      padding-left: 12px;
+      border-left: 4px solid var(--gold);
+    }
+
+    .grid-3 {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 16px;
+    }
+
+    .grid-2 {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 16px;
+    }
+
+    .box {
+      background: var(--card);
+      border: 1px solid var(--line);
+      border-radius: 12px;
+      padding: 16px;
+    }
+
+    .photo-thumb {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+      border-radius: 8px;
+      cursor: pointer;
+      display: block;
+      margin-bottom: 10px;
+      background: var(--card-2);
+    }
+
+    .box h3 {
+      font-size: 1.08rem;
+      margin-bottom: 6px;
+      color: #ffffff;
+    }
+
+    .box p {
+      font-size: 0.92rem;
+      color: var(--muted);
+    }
+
+    .click-hint {
+      display: inline-block;
+      margin-top: 8px;
+      font-size: 0.82rem;
+      color: var(--blue);
+      font-weight: 600;
+    }
+
+    .service-list {
+      list-style: none;
+      display: grid;
+      gap: 8px;
+      font-size: 0.95rem;
+      color: #e2e8f0;
+    }
+
+    .service-list li::before {
+      content: "• ";
+      color: var(--gold);
+      font-weight: bold;
+    }
+
+    /* Lightbox Modal for clicking photo */
+    .modal {
+      display: none;
+      position: fixed;
+      inset: 0;
+      z-index: 100;
+      background: rgba(0, 0, 0, 0.88);
+      align-items: center;
+      justify-content: center;
+      padding: 18px;
+    }
+
+    .modal.open {
+      display: flex;
+    }
+
+    .modal-inner {
+      max-width: 820px;
+      width: 100%;
+      background: var(--card);
+      border: 1px solid var(--line);
+      border-radius: 12px;
+      padding: 14px;
+      text-align: center;
+      position: relative;
+    }
+
+    .modal-inner img {
+      max-width: 100%;
+      max-height: 72vh;
+      border-radius: 8px;
+      object-fit: contain;
+    }
+
+    .modal-close {
+      position: absolute;
+      top: 10px;
+      right: 12px;
+      background: #ef4444;
+      color: #fff;
+      border: 0;
+      border-radius: 6px;
+      padding: 6px 12px;
+      font-weight: 700;
+      cursor: pointer;
+    }
+
+    /* Booking */
+    .field {
+      margin-bottom: 12px;
+    }
+
+    .field label {
+      display: block;
+      margin-bottom: 5px;
+      font-size: 0.9rem;
+      color: #cbd5e1;
+    }
+
+    .field input, .field select, .field textarea {
+      width: 100%;
+      padding: 10px 12px;
+      border-radius: 8px;
+      border: 1px solid var(--line);
+      background: #090d16;
+      color: #fff;
+    }
+
+    .btn-submit {
+      width: 100%;
+      padding: 12px;
+      border: 0;
+      border-radius: 8px;
+      background: var(--wa);
+      color: #05160b;
+      font-weight: 800;
+      font-size: 1rem;
+      cursor: pointer;
+    }
+
+    footer {
+      text-align: center;
+      padding: 24px 16px;
+      border-top: 1px solid var(--line);
+      color: var(--muted);
+      font-size: 0.88rem;
+    }
   </style>
 </head>
 <body>
 
-  <div class="topbar">
-    <div class="brand-left">
-      <img src="logo.png(1).png" alt="Nayan Digital Logo" class="custom-logo" onerror="this.style.display='none'" />
-      <span class="brand-name-top">नयन डिजिटल</span>
+  <header>
+    <div class="brand-bar">
+      <img src="logo.png" alt="Logo" onerror="this.src='logo.png(1).png'; this.onerror=function(){this.style.display='none';}" />
+      <strong id="t_brand_top">नयन डिजिटल</strong>
     </div>
-    <nav class="nav-links">
-      <a href="#photo-demos">फोटो डेमो</a>
-      <a href="#video-demos">व्हिडिओ डेमो</a>
-      <a href="#studio-items">गॅलरी व सेवा</a>
-      <a href="#booking">संपर्क व बुकिंग</a>
-    </nav>
-  </div>
+
+    <div class="lang-switch">
+      <button class="lang-btn active" onclick="setLang('mr', this)">मराठी</button>
+      <button class="lang-btn" onclick="setLang('hi', this)">हिंदी</button>
+      <button class="lang-btn" onclick="setLang('en', this)">English</button>
+    </div>
+  </header>
 
   <section class="hero">
-    <img src="logo.png(1).png" alt="नयन डिजिटल लोगो" class="hero-logo" onerror="this.style.display='none'" />
-    <h1>नयन डिजिटल</h1>
-    <div class="sub">Nayan Digital Photo &amp; Video Studio • खंबाळा, किनवट, नांदेड</div>
-
-    <div class="contact-strip">
-      <span>📞 संपर्क क्रमांक (पुढे अपडेट करू)</span>
-      <span>•</span>
-      <span>📍 खंबाळा (ता. किनवट, जि. नांदेड)</span>
-    </div>
-
-    <div class="hero-actions">
-      <a id="waDirect" class="btn-primary" href="#booking">WhatsApp वर बुकिंग करा</a>
-      <a class="btn-sec" href="#photo-demos">डेमो पाहा (Swipe / Scroll)</a>
+    <img src="logo.png" alt="Logo" class="hero-logo" onerror="this.src='logo.png(1).png'; this.onerror=function(){this.style.display='none';}" />
+    <h1 id="t_hero_title">नयन डिजिटल <span>खंबाळा</span></h1>
+    <p id="t_hero_sub">फोटोग्राफी, व्हिडिओग्राफी, ड्रोन शूट, स्टुडिओ व डिजिटल सेवा — तुमच्या पसंतीच्या भाषेत संपूर्ण माहिती.</p>
+    <div class="actions">
+      <a class="btn-wa" href="#booking" id="t_btn_book">WhatsApp बुकिंग</a>
+      <a class="btn-ghost" href="#photos" id="t_btn_demos">फोटो डेमो पहा</a>
     </div>
   </section>
 
   <main class="wrap">
-    <h2 class="sec-title" id="photo-demos">फोटो डेमो (Photo Demos)</h2>
-    <div class="grid-3">
-      <div class="card">
-        <img class="demo-img" src="https://images.unsplash.com/photo-1519741497674-611481863552?auto=format&fit=crop&w=800&q=80" alt="Wedding Photo Demo" />
-        <h3>लग्नसोहळा फोटोग्राफी डेमो</h3>
-        <p>पारंपरिक व कँडिड वेडिंग शॉट्स, हाय-रिझोल्यूशन क्वालिटी आणि आकर्षक कलर टोन.</p>
+    <h2 class="sec-title" id="t_sec_photos">फोटो डेमो (क्लिक करून मोठा फोटो पहा)</h2>
+    <div class="grid-3" id="photos">
+      <div class="box">
+        <img class="photo-thumb" src="https://images.unsplash.com/photo-1519741497674-611481863552?auto=format&fit=crop&w=900&q=80" alt="Demo 1" onclick="openModal(this.src, document.getElementById('t_p1_t').innerText)" />
+        <h3 id="t_p1_t">डेमो फोटो १</h3>
+        <p id="t_p1_d">येथे तुम्ही तुमचा स्वतःचा फोटो लिंक/फाईल बदलू शकता.</p>
+        <span class="click-hint" id="t_hint1">मोठा फोटो पाहण्यासाठी क्लिक करा</span>
       </div>
-      <div class="card">
-        <img class="demo-img" src="https://images.unsplash.com/photo-1537633552985-df8429e8048b?auto=format&fit=crop&w=800&q=80" alt="Pre-Wedding Demo" />
-        <h3>प्री-वेडिंग / कपल शूट डेमो</h3>
-        <p>निसर्गरम्य लोकेशन्स, क्रिएटिव्ह पोझ आणि प्रीमियम फ्रेमिंग स्टाईल.</p>
+      <div class="box">
+        <img class="photo-thumb" src="https://images.unsplash.com/photo-1537633552985-df8429e8048b?auto=format&fit=crop&w=900&q=80" alt="Demo 2" onclick="openModal(this.src, document.getElementById('t_p2_t').innerText)" />
+        <h3 id="t_p2_t">डेमो फोटो २</h3>
+        <p id="t_p2_d">येथे तुम्ही तुमचा स्वतःचा फोटो लिंक/फाईल बदलू शकता.</p>
+        <span class="click-hint" id="t_hint2">मोठा फोटो पाहण्यासाठी क्लिक करा</span>
       </div>
-      <div class="card">
-        <img class="demo-img" src="https://images.unsplash.com/photo-1473968512647-3e447244af8f?auto=format&fit=crop&w=800&q=80" alt="Drone & Event Demo" />
-        <h3>ड्रोन व इव्हेंट कव्हरेज डेमो</h3>
-        <p>आकाशातील विहंगम शॉट्स, सांस्कृतिक व कौटुंबिक कार्यक्रमांचे सविस्तर कव्हरेज.</p>
-      </div>
-    </div>
-
-    <h2 class="sec-title" id="video-demos">व्हिडिओ डेमो (Video Demos)</h2>
-    <div class="grid-2">
-      <div class="card">
-        <div class="video-box">
-          <iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ" title="Wedding & Drone Video Demo" allowfullscreen></iframe>
-        </div>
-        <h3>सिनेमॅटिक टीझर व ड्रोन व्हिडिओ डेमो</h3>
-        <p>येथे तुमचा स्वतःचा YouTube किंवा Highlight व्हिडिओ सहज जोडू शकता.</p>
-      </div>
-      <div class="card">
-        <div class="video-box">
-          <iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ" title="Event Highlight Video Demo" allowfullscreen></iframe>
-        </div>
-        <h3>इव्हेंट हायलाइट्स व रील डेमो</h3>
-        <p>लग्न, वाढदिवस किंवा विशेष कार्यक्रमांची व्हिडिओ झलक.</p>
+      <div class="box">
+        <img class="photo-thumb" src="https://images.unsplash.com/photo-1473968512647-3e447244af8f?auto=format&fit=crop&w=900&q=80" alt="Demo 3" onclick="openModal(this.src, document.getElementById('t_p3_t').innerText)" />
+        <h3 id="t_p3_t">डेमो फोटो ३</h3>
+        <p id="t_p3_d">येथे तुम्ही तुमचा स्वतःचा फोटो लिंक/फाईल बदलू शकता.</p>
+        <span class="click-hint" id="t_hint3">मोठा फोटो पाहण्यासाठी क्लिक करा</span>
       </div>
     </div>
 
-    <h2 class="sec-title" id="studio-items">गॅलरी आणि स्टुडिओमध्ये काय-काय मिळते?</h2>
-    <div class="grid-2">
-      <div class="card">
-        <h3>फोटोग्राफी, व्हिडिओ व गॅलरी सुविधा</h3>
-        <ul class="list-clean">
-          <li>वेडिंग, प्री-वेडिंग व इव्हेंट फोटो-व्हिडिओ शूट</li>
-          <li>ड्रोन व्हिडिओग्राफी व सिनेमॅटिक एडिटिंग</li>
-          <li>फोटो अल्बम डिझायनिंग व प्रिंटिंग</li>
-          <li>फोटो फ्रेम्स, गिफ्ट फ्रेम्स व स्टुडिओ पोर्ट्रेट</li>
-          <li>बॅनर, पोस्टर व ग्राफिक लेआउट डिझाइन</li>
+    <h2 class="sec-title" id="t_sec_videos">व्हिडिओ डेमो (तुमचे स्वतःचे व्हिडिओ येथे जोडा)</h2>
+    <div class="grid-2" id="videos">
+      <div class="box">
+        <h3 id="t_v1_t">स्टुडिओ व्हिडिओ डेमो १</h3>
+        <p id="t_v1_d">इथे कोणत्याही गाण्याचा व्हिडिओ नाही — तुमचा स्वतःचा शूट/हायलाइट व्हिडिओ किंवा लिंक येथे जोडता येईल.</p>
+      </div>
+      <div class="box">
+        <h3 id="t_v2_t">स्टुडिओ व्हिडिओ डेमो २</h3>
+        <p id="t_v2_d">तुमच्या पसंतीचा व्हिडिओ/रील/प्रोजेक्ट लिंक येथे सहज सेट करता येईल.</p>
+      </div>
+    </div>
+
+    <h2 class="sec-title" id="t_sec_services">सुविधा व उपलब्ध साहित्य</h2>
+    <div class="grid-2" id="services">
+      <div class="box">
+        <h3 id="t_s1_t">शूट व गॅलरी सेवा</h3>
+        <ul class="service-list" id="t_s1_list">
+          <li>फोटोग्राफी व व्हिडिओग्राफी</li>
+          <li>ड्रोन कव्हरेज</li>
+          <li>अल्बम व फ्रेम्स</li>
+          <li>बॅनर व ग्राफिक डिझाइन</li>
         </ul>
       </div>
-      <div class="card">
-        <h3>स्टुडिओ प्रिंटिंग व डिजिटल सेवा</h3>
-        <ul class="list-clean">
-          <li>पासपोर्ट साईझ फोटो व त्वरित प्रिंटिंग</li>
-          <li>झेरॉक्स, प्रिंटआऊट व स्कॅनिंग सुविधा</li>
-          <li>मोबाईल अ‍ॅक्सेसरीज व आवश्यक साहित्य</li>
-          <li>ऑनलाइन अर्ज, KYC व डिजिटल ग्राहक सेवा</li>
-          <li>वेळेवर व विश्वासार्ह डिलिव्हरी</li>
+      <div class="box">
+        <h3 id="t_s2_t">स्टुडिओ व डिजिटल सेवा</h3>
+        <ul class="service-list" id="t_s2_list">
+          <li>पासपोर्ट फोटो व प्रिंटिंग</li>
+          <li>झेरॉक्स व प्रिंटआऊट</li>
+          <li>मोबाईल अ‍ॅक्सेसरीज</li>
+          <li>डिजिटल / ग्राहक सेवा</li>
         </ul>
       </div>
     </div>
 
-    <h2 class="sec-title" id="booking">संपर्क आणि थेट WhatsApp बुकिंग</h2>
-    <div class="grid-2">
-      <div class="form-card">
-        <form onsubmit="bookOnWA(event)">
-          <div class="field">
-            <label>तुमचे नाव</label>
-            <input type="text" id="bName" required placeholder="नाव टाका" />
-          </div>
-          <div class="field">
-            <label>तुमचा मोबाईल नंबर</label>
-            <input type="tel" id="bPhone" required placeholder="10 अंकी नंबर" />
-          </div>
-          <div class="field">
-            <label>आवश्यक सेवा / डेमो</label>
-            <select id="bService">
-              <option>वेडिंग / प्री-वेडिंग शूट</option>
-              <option>ड्रोन / व्हिडिओग्राफी</option>
-              <option>अल्बम / फ्रेम / फोटो प्रिंट</option>
-              <option>स्टुडिओ / झेरॉक्स / डिजिटल सेवा</option>
-            </select>
-          </div>
-          <div class="field">
-            <label>इव्हेंट तारीख व माहिती</label>
-            <textarea id="bMsg" rows="3" placeholder="तारीख, गाव किंवा इतर तपशील..."></textarea>
-          </div>
-          <button type="submit" class="submit-btn">WhatsApp वर बुकिंग पाठवा</button>
-        </form>
-      </div>
-
-      <div class="card">
-        <h3>थेट संपर्क तपशील</h3>
-        <p style="margin-bottom:12px;"><strong>स्टुडिओ:</strong> नयन डिजिटल (Nayan Digital Photo &amp; Video Studio)</p>
-        <p style="margin-bottom:12px;"><strong>पत्ता:</strong> खंबाळा, ता. किनवट, जि. नांदेड</p>
-        <p style="margin-bottom:16px;"><strong>संपर्क:</strong> थेट WhatsApp बुकिंग फॉर्मवरून मेसेज पाठवा</p>
-      </div>
+    <h2 class="sec-title" id="t_sec_book">संपर्क व बुकिंग</h2>
+    <div class="box" id="booking" style="max-width:680px;">
+      <form onsubmit="sendWA(event)">
+        <div class="field">
+          <label id="t_l_name">नाव</label>
+          <input type="text" id="wName" required />
+        </div>
+        <div class="field">
+          <label id="t_l_phone">मोबाईल नंबर</label>
+          <input type="tel" id="wPhone" required />
+        </div>
+        <div class="field">
+          <label id="t_l_msg">माहिती</label>
+          <textarea id="wMsg" rows="3"></textarea>
+        </div>
+        <button type="submit" class="btn-submit" id="t_btn_send">WhatsApp वर पाठवा</button>
+      </form>
     </div>
   </main>
 
-  <footer>
-    © 2026 नयन डिजिटल (Nayan Digital) • सर्व हक्क राखीव
-  </footer>
+  <div class="modal" id="photoModal" onclick="closeModal(event)">
+    <div class="modal-inner">
+      <button class="modal-close" onclick="closeModal(event)">X</button>
+      <img id="modalImg" src="" alt="Full View" />
+      <p id="modalCaption" style="margin-top:10px; color:#f1f5f9;"></p>
+    </div>
+  </div>
+
+  <footer id="t_footer">नयन डिजिटल • खंबाळा</footer>
 
   <script>
-    const WA_NO = "910000000000";
-    function bookOnWA(e) {
+    const WA_NUMBER = "910000000000";
+
+    const i18n = {
+      mr: {
+        top: "नयन डिजिटल",
+        heroTitle: 'नयन डिजिटल <span>खंबाळा</span>',
+        heroSub: "फोटोग्राफी, व्हिडिओग्राफी, ड्रोन शूट, स्टुडिओ व डिजिटल सेवा — मराठी, हिंदी व इंग्रजी भाषेत.",
+        book: "WhatsApp बुकिंग",
+        demos: "फोटो डेमो पहा",
+        secPhotos: "फोटो डेमो (क्लिक करून मोठा फोटो पहा)",
+        p1t: "डेमो फोटो १", p1d: "येथे तुम्ही तुमचा स्वतःचा फोटो बदलू शकता.",
+        p2t: "डेमो फोटो २", p2d: "येथे तुम्ही तुमचा स्वतःचा फोटो बदलू शकता.",
+        p3t: "डेमो फोटो ३", p3d: "येथे तुम्ही तुमचा स्वतःचा फोटो बदलू शकता.",
+        hint: "मोठा फोटो पाहण्यासाठी क्लिक करा",
+        secVideos: "व्हिडिओ डेमो (तुमचे स्वतःचे व्हिडिओ येथे जोडा)",
+        v1t: "स्टुडिओ व्हिडिओ डेमो १", v1d: "येथे तुम्ही तुमचा स्वतःचा शूट/हायलाइट व्हिडिओ जोडू शकता.",
+        v2t: "स्टुडिओ व्हिडिओ डेमो २", v2d: "येथे तुम्ही तुमचा दुसरा व्हिडिओ/प्रोजेक्ट जोडू शकता.",
+        secServices: "सुविधा व उपलब्ध साहित्य",
+        s1t: "शूट व गॅलरी सेवा",
+        s1: ["फोटोग्राफी व व्हिडिओग्राफी", "ड्रोन कव्हरेज", "अल्बम व फ्रेम्स", "बॅनर व ग्राफिक डिझाइन"],
+        s2t: "स्टुडिओ व डिजिटल सेवा",
+        s2: ["पासपोर्ट फोटो व प्रिंटिंग", "झेरॉक्स व प्रिंटआऊट", "मोबाईल अ‍ॅक्सेसरीज", "डिजिटल / ग्राहक सेवा"],
+        secBook: "संपर्क व बुकिंग",
+        lName: "नाव", lPhone: "मोबाईल नंबर", lMsg: "माहिती", send: "WhatsApp वर पाठवा",
+        footer: "नयन डिजिटल • खंबाळा"
+      },
+      hi: {
+        top: "नयन डिजिटल",
+        heroTitle: 'नयन डिजिटल <span>खंबाळा</span>',
+        heroSub: "फोटोग्राफी, वीडियोग्राफी, ड्रोन शूट, स्टूडियो और डिजिटल सेवाएं — मराठी, हिंदी और अंग्रेजी में.",
+        book: "WhatsApp बुकिंग",
+        demos: "फोटो डेमो देखें",
+        secPhotos: "फोटो डेमो (बड़ी फोटो देखने के लिए क्लिक करें)",
+        p1t: "डेमो फोटो १", p1d: "यहाँ आप अपनी पसंद की फोटो लगा सकते हैं.",
+        p2t: "डेमो फोटो २", p2d: "यहाँ आप अपनी पसंद की फोटो लगा सकते हैं.",
+        p3t: "डेमो फोटो ३", p3d: "यहाँ आप अपनी पसंद की फोटो लगा सकते हैं.",
+        hint: "बड़ी फोटो देखने के लिए क्लिक करें",
+        secVideos: "वीडियो डेमो (अपने वीडियो यहाँ जोड़ें)",
+        v1t: "स्टूडियो वीडियो डेमो १", v1d: "यहाँ आप अपना शूट/हाइलाइट वीडियो जोड़ सकते हैं.",
+        v2t: "स्टूडियो वीडियो डेमो २", v2d: "यहाँ आप अपना दूसरा वीडियो/प्रोजेक्ट जोड़ सकते हैं.",
+        secServices: "सेवाएं और उपलब्ध सामग्री",
+        s1t: "शूट और गैलरी सेवाएं",
+        s1: ["फोटोग्राफी और वीडियोग्राफी", "ड्रोन कवरेज", "एल्बम और फ्रेम्स", "बैनर और ग्राफिक डिज़ाइन"],
+        s2t: "स्टूडियो और डिजिटल सेवाएं",
+        s2: ["पासपोर्ट फोटो और प्रिंटिंग", "ज़ेरॉक्स और प्रिंटआउट", "मोबाइल एक्सेसरीज़", "डिजिटल / ग्राहक सेवा"],
+        secBook: "संपर्क और बुकिंग",
+        lName: "नाम", lPhone: "मोबाइल नंबर", lMsg: "विवरण", send: "WhatsApp पर भेजें",
+        footer: "नयन डिजिटल • खंबाळा"
+      },
+      en: {
+        top: "Nayan Digital",
+        heroTitle: 'Nayan Digital <span>Khambala</span>',
+        heroSub: "Photography, Videography, Drone Shoot, Studio & Digital Services in Marathi, Hindi & English.",
+        book: "WhatsApp Booking",
+        demos: "View Photo Demos",
+        secPhotos: "Photo Demos (Click to View Full Photo)",
+        p1t: "Photo Demo 1", p1d: "Replace with your own photo link or file.",
+        p2t: "Photo Demo 2", p2d: "Replace with your own photo link or file.",
+        p3t: "Photo Demo 3", p3d: "Replace with your own photo link or file.",
+        hint: "Click to view full photo",
+        secVideos: "Video Demos (Add Your Own Videos Here)",
+        v1t: "Studio Video Demo 1", v1d: "Add your own shoot or highlight video here.",
+        v2t: "Studio Video Demo 2", v2d: "Add another studio video or reel link here.",
+        secServices: "Services & Studio Items",
+        s1t: "Shoot & Gallery Services",
+        s1: ["Photography & Videography", "Drone Coverage", "Albums & Frames", "Banners & Graphic Design"],
+        s2t: "Studio & Digital Services",
+        s2: ["Passport Photos & Printing", "Xerox & Printouts", "Mobile Accessories", "Digital / Citizen Services"],
+        secBook: "Contact & Booking",
+        lName: "Name", lPhone: "Mobile Number", lMsg: "Details", send: "Send on WhatsApp",
+        footer: "Nayan Digital • Khambala"
+      }
+    };
+
+    function setLang(lang, btn) {
+      document.querySelectorAll(".lang-btn").forEach(b => b.classList.remove("active"));
+      if (btn) btn.classList.add("active");
+      const d = i18n[lang];
+      document.getElementById("t_brand_top").innerText = d.top;
+      document.getElementById("t_hero_title").innerHTML = d.heroTitle;
+      document.getElementById("t_hero_sub").innerText = d.heroSub;
+      document.getElementById("t_btn_book").innerText = d.book;
+      document.getElementById("t_btn_demos").innerText = d.demos;
+      document.getElementById("t_sec_photos").innerText = d.secPhotos;
+      document.getElementById("t_p1_t").innerText = d.p1t;
+      document.getElementById("t_p1_d").innerText = d.p1d;
+      document.getElementById("t_p2_t").innerText = d.p2t;
+      document.getElementById("t_p2_d").innerText = d.p2d;
+      document.getElementById("t_p3_t").innerText = d.p3t;
+      document.getElementById("t_p3_d").innerText = d.p3d;
+      document.getElementById("t_hint1").innerText = d.hint;
+      document.getElementById("t_hint2").innerText = d.hint;
+      document.getElementById("t_hint3").innerText = d.hint;
+      document.getElementById("t_sec_videos").innerText = d.secVideos;
+      document.getElementById("t_v1_t").innerText = d.v1t;
+      document.getElementById("t_v1_d").innerText = d.v1d;
+      document.getElementById("t_v2_t").innerText = d.v2t;
+      document.getElementById("t_v2_d").innerText = d.v2d;
+      document.getElementById("t_sec_services").innerText = d.secServices;
+      document.getElementById("t_s1_t").innerText = d.s1t;
+      document.getElementById("t_s2_t").innerText = d.s2t;
+      document.getElementById("t_s1_list").innerHTML = d.s1.map(x => `<li>${x}</li>`).join("");
+      document.getElementById("t_s2_list").innerHTML = d.s2.map(x => `<li>${x}</li>`).join("");
+      document.getElementById("t_sec_book").innerText = d.secBook;
+      document.getElementById("t_l_name").innerText = d.lName;
+      document.getElementById("t_l_phone").innerText = d.lPhone;
+      document.getElementById("t_l_msg").innerText = d.lMsg;
+      document.getElementById("t_btn_send").innerText = d.send;
+      document.getElementById("t_footer").innerText = d.footer;
+    }
+
+    function openModal(src, caption) {
+      document.getElementById("modalImg").src = src;
+      document.getElementById("modalCaption").innerText = caption;
+      document.getElementById("photoModal").classList.add("open");
+    }
+
+    function closeModal(e) {
+      if (e.target.id === "photoModal" || e.target.classList.contains("modal-close")) {
+        document.getElementById("photoModal").classList.remove("open");
+      }
+    }
+
+    function sendWA(e) {
       e.preventDefault();
-      const name = document.getElementById("bName").value.trim();
-      const phone = document.getElementById("bPhone").value.trim();
-      const srv = document.getElementById("bService").value;
-      const msg = document.getElementById("bMsg").value.trim() || "काही नाही";
-      const text = `नमस्कार नयन डिजिटल,\nनाव: ${name}\nमोबाईल: ${phone}\nसेवा: ${srv}\nतपशील: ${msg}`;
-      window.open(`https://wa.me/${WA_NO}?text=${encodeURIComponent(text)}`, "_blank");
+      const name = document.getElementById("wName").value.trim();
+      const phone = document.getElementById("wPhone").value.trim();
+      const msg = document.getElementById("wMsg").value.trim();
+      const text = `Nayan Digital Inquiry\nName: ${name}\nPhone: ${phone}\nDetails: ${msg}`;
+      window.open(`https://wa.me/${WA_NUMBER}?text=${encodeURIComponent(text)}`, "_blank");
     }
   </script>
 </body>
