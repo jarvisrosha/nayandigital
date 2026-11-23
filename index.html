@@ -3,21 +3,21 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>NAYAN DIGITAL | LUXURY STUDIO &amp; VISUALS</title>
+  <title>NAYAN DIGITAL | LUXURY PHOTO &amp; VIDEO STUDIO</title>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet" />
   <style>
     :root {
       --bg: #070709;
-      --bg-elev: #0e0f13;
+      --bg-2: #0d0e12;
       --card: #13151b;
       --white: #ffffff;
       --ivory: #e5e7eb;
       --muted: #9ca3af;
       --gold: #d4af37;
-      --gold-soft: rgba(212, 175, 55, 0.22);
-      --line: rgba(255, 255, 255, 0.1);
+      --gold-soft: rgba(212, 175, 55, 0.28);
+      --line: rgba(255, 255, 255, 0.11);
       --wa: #22c55e;
     }
 
@@ -29,43 +29,43 @@
     }
 
     body {
-      background: radial-gradient(circle at top, #171510 0%, var(--bg) 55%);
+      background: radial-gradient(circle at top, #18140b 0%, var(--bg) 52%);
       color: var(--white);
       font-family: "Plus Jakarta Sans", system-ui, -apple-system, sans-serif;
-      line-height: 1.7;
+      line-height: 1.65;
       overflow-x: hidden;
     }
 
-    h1, h2, h3, .brand-name, .btn {
+    h1, h2, h3, .brand-txt, .nav-a, .btn {
       font-family: "Cinzel", Georgia, serif;
     }
 
     /* Header */
-    .topbar {
+    header {
       position: sticky;
       top: 0;
       z-index: 50;
-      background: rgba(7, 7, 9, 0.9);
+      background: rgba(7, 7, 9, 0.94);
       backdrop-filter: blur(12px);
       border-bottom: 1px solid var(--gold-soft);
-      padding: 15px 26px;
+      padding: 14px 22px;
       display: flex;
       flex-wrap: wrap;
       align-items: center;
       justify-content: space-between;
-      gap: 16px;
+      gap: 14px;
     }
 
-    .brand-link {
+    .brand-wrap {
       display: flex;
       align-items: center;
-      gap: 12px;
+      gap: 10px;
       text-decoration: none;
     }
 
-    .logo-badge {
-      width: 44px;
-      height: 44px;
+    .logo-slot {
+      width: 42px;
+      height: 42px;
       border-radius: 10px;
       border: 1px solid var(--gold);
       background: var(--card);
@@ -75,111 +75,117 @@
       overflow: hidden;
       font-weight: 700;
       color: var(--gold);
-      font-size: 0.9rem;
+      font-size: 0.85rem;
+      position: relative;
     }
 
-    .logo-badge img {
+    .logo-slot img {
       width: 100%;
       height: 100%;
       object-fit: cover;
+      position: relative;
+      z-index: 2;
     }
 
-    .brand-name {
+    .brand-txt {
       color: var(--white);
-      font-size: 1rem;
+      font-size: 0.98rem;
       font-weight: 700;
       letter-spacing: 2px;
     }
 
-    .nav {
+    .nav-bar {
       display: flex;
       flex-wrap: wrap;
-      gap: 20px;
+      gap: 14px;
+      align-items: center;
     }
 
-    .nav a {
+    .nav-a {
       color: var(--ivory);
       text-decoration: none;
-      font-size: 0.78rem;
-      letter-spacing: 1.5px;
+      font-size: 0.72rem;
+      letter-spacing: 1.2px;
       text-transform: uppercase;
-      transition: color 0.2s;
     }
 
-    .nav a:hover {
+    .nav-a:hover {
       color: var(--gold);
     }
 
-    /* Luxury Hero */
+    /* Hero */
     .hero {
-      padding: 88px 24px 72px;
+      padding: 80px 22px 66px;
       text-align: center;
       border-bottom: 1px solid var(--line);
     }
 
-    .hero-frame {
-      width: 104px;
-      height: 104px;
-      margin: 0 auto 24px;
-      border-radius: 20px;
+    .hero-logo {
+      width: 100px;
+      height: 100px;
+      margin: 0 auto 20px;
+      border-radius: 18px;
       border: 1px solid var(--gold);
       background: var(--card);
-      box-shadow: 0 16px 40px rgba(0, 0, 0, 0.65);
       display: flex;
       align-items: center;
       justify-content: center;
       overflow: hidden;
-      font-size: 1.3rem;
+      font-size: 1.2rem;
       font-weight: 700;
       color: var(--gold);
+      position: relative;
     }
 
-    .hero-frame img {
+    .hero-logo img {
       width: 100%;
       height: 100%;
       object-fit: cover;
+      position: relative;
+      z-index: 2;
     }
 
     .hero h1 {
       color: var(--white);
-      font-size: clamp(2rem, 5vw, 3.3rem);
+      font-size: clamp(1.9rem, 5vw, 3.2rem);
       font-weight: 700;
-      letter-spacing: 3px;
-      margin-bottom: 12px;
-    }
-
-    .hero-sub {
-      color: var(--gold);
-      font-size: 0.85rem;
       letter-spacing: 2.5px;
+      margin-bottom: 10px;
+    }
+
+    .tagline {
+      color: var(--gold);
+      font-style: italic;
+      font-size: clamp(1rem, 2.4vw, 1.3rem);
+      margin-bottom: 10px;
+    }
+
+    .hero-pillars {
+      color: var(--ivory);
+      font-size: 0.85rem;
+      letter-spacing: 2px;
       text-transform: uppercase;
-      margin-bottom: 20px;
+      margin-bottom: 26px;
     }
 
-    .hero-copy {
-      max-width: 680px;
-      margin: 0 auto 30px;
-      color: var(--muted);
-      font-size: 0.98rem;
-    }
-
-    .cta-row {
+    .hero-btns {
       display: flex;
       flex-wrap: wrap;
       justify-content: center;
-      gap: 14px;
+      gap: 12px;
     }
 
     .btn {
-      padding: 13px 24px;
+      padding: 12px 22px;
       border-radius: 6px;
-      font-size: 0.78rem;
+      font-size: 0.75rem;
       font-weight: 700;
-      letter-spacing: 1.5px;
+      letter-spacing: 1.4px;
       text-transform: uppercase;
       text-decoration: none;
       border: none;
       cursor: pointer;
+      display: inline-block;
     }
 
     .btn-gold {
@@ -192,20 +198,20 @@
       color: #05160b;
     }
 
-    .btn-line {
+    .btn-outline {
       background: transparent;
       color: var(--white);
       border: 1px solid var(--gold-soft);
     }
 
     /* Sections */
-    .sec {
-      padding: 72px 24px;
+    section.block {
+      padding: 68px 22px;
       border-bottom: 1px solid var(--line);
     }
 
-    .sec.dark {
-      background: var(--bg-elev);
+    section.block.alt {
+      background: var(--bg-2);
     }
 
     .wrap {
@@ -213,129 +219,219 @@
       margin: 0 auto;
     }
 
-    .sec-top {
-      margin-bottom: 32px;
+    .sec-head {
+      margin-bottom: 28px;
     }
 
-    .sec-kicker {
+    .sec-sub {
       color: var(--gold);
       font-size: 0.75rem;
-      letter-spacing: 2.2px;
+      letter-spacing: 2px;
       text-transform: uppercase;
       margin-bottom: 6px;
     }
 
-    .sec-h2 {
+    .sec-title {
       color: var(--white);
-      font-size: clamp(1.4rem, 3vw, 2rem);
-      letter-spacing: 1.5px;
-    }
-
-    .grid-3 {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
-      gap: 22px;
+      font-size: clamp(1.35rem, 3vw, 1.95rem);
+      letter-spacing: 1.4px;
     }
 
     .grid-2 {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(310px, 1fr));
-      gap: 24px;
+      grid-template-columns: repeat(auto-fit, minmax(290px, 1fr));
+      gap: 20px;
     }
 
-    .lux-card {
+    .grid-3 {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+    }
+
+    .card {
       background: var(--card);
       border: 1px solid var(--line);
       border-radius: 12px;
-      padding: 22px;
-      transition: border-color 0.25s, transform 0.25s;
+      padding: 20px;
     }
 
-    .lux-card:hover {
-      border-color: var(--gold-soft);
-      transform: translateY(-3px);
+    .card.featured {
+      border-color: var(--gold);
     }
 
-    .lux-img {
+    .badge-pop {
+      display: inline-block;
+      background: rgba(34, 197, 94, 0.16);
+      color: #4ade80;
+      border: 1px solid rgba(34, 197, 94, 0.35);
+      font-size: 0.72rem;
+      font-weight: 700;
+      padding: 3px 10px;
+      border-radius: 999px;
+      margin-bottom: 10px;
+      text-transform: uppercase;
+    }
+
+    .card-img {
       width: 100%;
-      height: 210px;
+      height: 195px;
       object-fit: cover;
       border-radius: 8px;
-      margin-bottom: 14px;
+      margin-bottom: 12px;
       cursor: pointer;
       display: block;
       background: #0b0c10;
     }
 
-    .lux-card h3 {
+    .card h3 {
       color: var(--white);
       font-size: 1rem;
-      letter-spacing: 1px;
-      margin-bottom: 8px;
+      letter-spacing: 0.8px;
+      margin-bottom: 6px;
     }
 
-    .lux-card p {
+    .card p {
       color: var(--muted);
-      font-size: 0.92rem;
+      font-size: 0.9rem;
     }
 
-    .open-link {
-      margin-top: 10px;
-      background: none;
-      border: none;
+    .price-lbl {
       color: var(--gold);
-      font-size: 0.8rem;
-      letter-spacing: 1px;
-      text-transform: uppercase;
-      cursor: pointer;
-      text-decoration: underline;
+      font-size: 1.35rem;
+      font-weight: 700;
+      margin: 10px 0 12px;
     }
 
-    .lux-list {
+    .feat-list {
       list-style: none;
       display: grid;
-      gap: 10px;
-    }
-
-    .lux-list li {
+      gap: 7px;
       color: var(--ivory);
-      font-size: 0.93rem;
-      padding-bottom: 9px;
-      border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+      font-size: 0.9rem;
     }
 
-    .lux-list li:last-child {
-      border-bottom: none;
-      padding-bottom: 0;
+    .feat-list li::before {
+      content: "• ";
+      color: var(--gold);
+      font-weight: bold;
+    }
+
+    .filter-bar {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-bottom: 20px;
+    }
+
+    .filter-btn {
+      background: var(--card);
+      color: var(--ivory);
+      border: 1px solid var(--line);
+      padding: 7px 14px;
+      border-radius: 999px;
+      font-size: 0.8rem;
+      font-weight: 600;
+      cursor: pointer;
+    }
+
+    .filter-btn.active {
+      background: var(--gold);
+      color: #09090b;
+      border-color: var(--gold);
+    }
+
+    .vid-thumb {
+      width: 100%;
+      height: 190px;
+      border-radius: 8px;
+      background: linear-gradient(135deg, #1b170e, #0c0e14);
+      border: 1px solid var(--gold-soft);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 12px;
+      color: var(--gold);
+      font-weight: 700;
+      letter-spacing: 1px;
+      font-size: 0.88rem;
+      text-align: center;
+      padding: 12px;
     }
 
     .field {
-      margin-bottom: 14px;
+      margin-bottom: 12px;
     }
 
     .field label {
       display: block;
       color: var(--ivory);
       font-size: 0.78rem;
-      letter-spacing: 1px;
+      font-weight: 600;
+      letter-spacing: 0.8px;
       text-transform: uppercase;
-      margin-bottom: 6px;
+      margin-bottom: 5px;
     }
 
     .field input,
     .field select,
     .field textarea {
       width: 100%;
-      padding: 11px 14px;
+      padding: 10px 12px;
       border-radius: 8px;
       border: 1px solid var(--line);
-      background: #090a0d;
+      background: #08090c;
       color: var(--white);
       font-family: inherit;
-      font-size: 0.95rem;
+      font-size: 0.94rem;
     }
 
-    /* Modal */
+    .confirm-box {
+      display: none;
+      margin-top: 14px;
+      padding: 12px;
+      border-radius: 8px;
+      border: 1px solid var(--gold);
+      background: rgba(212, 175, 55, 0.1);
+      color: var(--ivory);
+      font-size: 0.88rem;
+    }
+
+    .confirm-box.show {
+      display: block;
+    }
+
+    /* Admin Panel (Hidden for normal clients until owner PIN login) */
+    #adminPanel {
+      display: none;
+      margin-top: 24px;
+      border: 1px solid var(--gold);
+      border-radius: 12px;
+      padding: 20px;
+      background: #101218;
+    }
+
+    #adminPanel.active {
+      display: block;
+    }
+
+    /* Floating WhatsApp Button */
+    .wa-float {
+      position: fixed;
+      right: 20px;
+      bottom: 20px;
+      z-index: 60;
+      background: var(--wa);
+      color: #05160b;
+      font-weight: 800;
+      font-size: 0.85rem;
+      text-decoration: none;
+      padding: 12px 18px;
+      border-radius: 999px;
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.55);
+    }
+
+    /* Lightbox */
     .modal {
       display: none;
       position: fixed;
@@ -344,14 +440,14 @@
       background: rgba(0, 0, 0, 0.92);
       align-items: center;
       justify-content: center;
-      padding: 20px;
+      padding: 18px;
     }
 
     .modal.open {
       display: flex;
     }
 
-    .modal-box {
+    .modal-inner {
       position: relative;
       max-width: 880px;
       width: 100%;
@@ -362,19 +458,19 @@
       text-align: center;
     }
 
-    .modal-box img {
+    .modal-inner img {
       max-width: 100%;
       max-height: 75vh;
       border-radius: 8px;
       object-fit: contain;
     }
 
-    .modal-x {
+    .modal-close {
       position: absolute;
-      top: 12px;
-      right: 12px;
-      background: #181a20;
-      color: var(--white);
+      top: 10px;
+      right: 10px;
+      background: #1a1c24;
+      color: #fff;
       border: 1px solid var(--line);
       border-radius: 6px;
       padding: 6px 12px;
@@ -382,233 +478,516 @@
     }
 
     footer {
-      padding: 30px 24px;
+      padding: 30px 20px 80px;
       text-align: center;
       color: var(--muted);
       font-size: 0.8rem;
       letter-spacing: 1.5px;
       text-transform: uppercase;
     }
+
+    .owner-trigger {
+      margin-top: 14px;
+      background: none;
+      border: 1px solid var(--line);
+      color: var(--muted);
+      padding: 6px 14px;
+      border-radius: 6px;
+      font-size: 0.75rem;
+      cursor: pointer;
+    }
   </style>
 </head>
 <body>
 
-  <header class="topbar">
-    <a href="#" class="brand-link">
-      <div class="logo-badge">
-        <img src="logo.png(1).png" alt="Logo" onload="this.parentElement.dataset.ok='1'" onerror="this.remove()" />
+  <header>
+    <a href="#" class="brand-wrap">
+      <div class="logo-slot">
+        <img src="logo.png" alt="Logo" onerror="if(!this.dataset.tried){this.dataset.tried='1';this.src='logo.png(1).png';}else{this.remove();}" />
         <span>ND</span>
       </div>
-      <span class="brand-name">NAYAN DIGITAL</span>
+      <span class="brand-txt" id="hdrBrand">NAYAN DIGITAL</span>
     </a>
-    <nav class="nav">
-      <a href="#photos">PHOTO DEMOS</a>
-      <a href="#videos">VIDEO DEMOS</a>
-      <a href="#gallery">GALLERY &amp; STUDIO</a>
-      <a href="#booking">BOOKING</a>
-      <a href="#update">UPDATE &amp; SECURITY</a>
+    <nav class="nav-bar">
+      <a href="#about" class="nav-a">About Us</a>
+      <a href="#services" class="nav-a">Our Services</a>
+      <a href="#portfolio" class="nav-a">Portfolio</a>
+      <a href="#videos" class="nav-a">Video Gallery</a>
+      <a href="#packages" class="nav-a">Packages</a>
+      <a href="#booking" class="nav-a">Booking</a>
+      <a href="#reviews" class="nav-a">Reviews</a>
+      <a href="#contact" class="nav-a">Contact Us</a>
     </nav>
   </header>
 
   <section class="hero">
-    <div class="hero-frame">
-      <img src="logo.png(1).png" alt="Nayan Digital" onload="this.parentElement.dataset.ok='1'" onerror="this.remove()" />
+    <div class="hero-logo">
+      <img src="logo.png" alt="Nayan Digital Logo" onerror="if(!this.dataset.tried){this.dataset.tried='1';this.src='logo.png(1).png';}else{this.remove();}" />
       <span>ND</span>
     </div>
-    <h1>NAYAN DIGITAL KHAMBALA</h1>
-    <div class="hero-sub">LUXURY PHOTOGRAPHY • CINEMA • DRONE • STUDIO</div>
-    <p class="hero-copy">
-      Refined visual storytelling, studio craft, custom albums &amp; frames, and reliable digital services in Khambala, Kinwat, Nanded.
-    </p>
-    <div class="cta-row">
-      <a href="#booking" class="btn btn-wa">WHATSAPP BOOKING</a>
-      <a href="#photos" class="btn btn-line">VIEW DEMOS</a>
+    <h1 id="heroTitle">NAYAN DIGITAL</h1>
+    <div class="tagline" id="heroTagline">"Capturing Your Beautiful Moments Forever."</div>
+    <div class="hero-pillars" id="heroPillars">Wedding | Pre-Wedding | Cinematic Films</div>
+    <div class="hero-btns">
+      <a href="#booking" class="btn btn-gold">Book Your Event</a>
+      <a href="#portfolio" class="btn btn-outline">View Our Work</a>
+      <a href="#contact" class="btn btn-wa">Contact Us</a>
     </div>
   </section>
 
-  <section class="sec dark" id="photos">
+  <!-- 4. About Us -->
+  <section class="block alt" id="about">
     <div class="wrap">
-      <div class="sec-top">
-        <div class="sec-kicker">01 • SIGNATURE FRAMES</div>
-        <h2 class="sec-h2">PHOTO DEMOS</h2>
+      <div class="sec-head">
+        <div class="sec-sub">About Us</div>
+        <h2 class="sec-title">Welcome to Nayan Digital</h2>
+      </div>
+      <div class="card">
+        <p style="color:var(--ivory); margin-bottom:12px;" id="aboutText">
+          We capture your precious moments and transform them into beautiful memories. Our passion is photography, creativity and cinematic storytelling.
+        </p>
+        <p style="color:var(--gold); font-weight:600;" id="aboutLoc">
+          Location: Khambala, Taluka Kinwat, District Nanded, Maharashtra.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- 5. Our Services -->
+  <section class="block" id="services">
+    <div class="wrap">
+      <div class="sec-head">
+        <div class="sec-sub">Our Services</div>
+        <h2 class="sec-title">Photography, Films &amp; Studio</h2>
       </div>
       <div class="grid-3">
-        <div class="lux-card">
-          <img src="https://images.unsplash.com/photo-1519741497674-611481863552?auto=format&amp;fit=crop&amp;w=900&amp;q=80" alt="Wedding" class="lux-img" onclick="openPreview(this.src, 'WEDDING COLLECTION DEMO')" />
-          <h3>WEDDING COLLECTION</h3>
-          <p>Timeless portraits and event coverage. Click to inspect full frame.</p>
-          <button type="button" class="open-link" onclick="openPreview('https://images.unsplash.com/photo-1519741497674-611481863552?auto=format&amp;fit=crop&amp;w=1200&amp;q=90', 'WEDDING COLLECTION DEMO')">FULL VIEW</button>
+        <div class="card">
+          <h3>Wedding Photography</h3>
+          <p>Timeless wedding ceremony and family portraits.</p>
         </div>
-        <div class="lux-card">
-          <img src="https://images.unsplash.com/photo-1537633552985-df8429e8048b?auto=format&amp;fit=crop&amp;w=900&amp;q=80" alt="Pre-Wedding" class="lux-img" onclick="openPreview(this.src, 'PRE-WEDDING EDITORIAL DEMO')" />
-          <h3>PRE-WEDDING EDITORIAL</h3>
-          <p>Clean compositions and natural light portraits. Click to inspect full frame.</p>
-          <button type="button" class="open-link" onclick="openPreview('https://images.unsplash.com/photo-1537633552985-df8429e8048b?auto=format&amp;fit=crop&amp;w=1200&amp;q=90', 'PRE-WEDDING EDITORIAL DEMO')">FULL VIEW</button>
+        <div class="card">
+          <h3>Wedding Videography</h3>
+          <p>Complete event video coverage with clean editing.</p>
         </div>
-        <div class="lux-card">
-          <img src="https://images.unsplash.com/photo-1473968512647-3e447244af8f?auto=format&amp;fit=crop&amp;w=900&amp;q=80" alt="Drone" class="lux-img" onclick="openPreview(this.src, 'AERIAL &amp; DRONE DEMO')" />
-          <h3>AERIAL &amp; DRONE</h3>
-          <p>Wide aerial angles for grand occasions. Click to inspect full frame.</p>
-          <button type="button" class="open-link" onclick="openPreview('https://images.unsplash.com/photo-1473968512647-3e447244af8f?auto=format&amp;fit=crop&amp;w=1200&amp;q=90', 'AERIAL &amp; DRONE DEMO')">FULL VIEW</button>
+        <div class="card">
+          <h3>Pre-Wedding Shoot</h3>
+          <p>Outdoor couple photos and creative pre-wedding frames.</p>
+        </div>
+        <div class="card">
+          <h3>Cinematic Films</h3>
+          <p>Story-driven highlight cuts, reels, and aerial shots.</p>
+        </div>
+        <div class="card">
+          <h3>Photo Studio</h3>
+          <p>Passport photos, studio portraits, prints &amp; framing.</p>
+        </div>
+        <div class="card">
+          <h3>Wedding Album</h3>
+          <p>Custom designed wedding albums and print layouts.</p>
         </div>
       </div>
     </div>
   </section>
 
-  <section class="sec" id="videos">
+  <!-- 6. Portfolio -->
+  <section class="block alt" id="portfolio">
     <div class="wrap">
-      <div class="sec-top">
-        <div class="sec-kicker">02 • MOTION SHOWCASE</div>
-        <h2 class="sec-h2">VIDEO DEMOS</h2>
+      <div class="sec-head">
+        <div class="sec-sub">Portfolio</div>
+        <h2 class="sec-title">Featured Work (Click Photo for Full View)</h2>
+      </div>
+
+      <div class="filter-bar">
+        <button type="button" class="filter-btn active" onclick="filterItems('All', this)">All Photos</button>
+        <button type="button" class="filter-btn" onclick="filterItems('Wedding', this)">Wedding</button>
+        <button type="button" class="filter-btn" onclick="filterItems('Pre-Wedding', this)">Pre-Wedding</button>
+        <button type="button" class="filter-btn" onclick="filterItems('Haldi', this)">Haldi</button>
+        <button type="button" class="filter-btn" onclick="filterItems('Engagement', this)">Engagement</button>
+        <button type="button" class="filter-btn" onclick="filterItems('Birthday', this)">Birthday</button>
+        <button type="button" class="filter-btn" onclick="filterItems('Portrait', this)">Portrait</button>
+      </div>
+
+      <div class="grid-3" id="portfolioGrid">
+        <div class="card p-item" data-cat="Wedding">
+          <img class="card-img" src="https://images.unsplash.com/photo-1519741497674-611481863552?auto=format&amp;fit=crop&amp;w=900&amp;q=80" alt="Wedding" onclick="openImg(this.src, 'Wedding — Nayan Digital')" />
+          <h3>Wedding Ceremony</h3>
+          <p>Category: Wedding</p>
+        </div>
+        <div class="card p-item" data-cat="Pre-Wedding">
+          <img class="card-img" src="https://images.unsplash.com/photo-1537633552985-df8429e8048b?auto=format&amp;fit=crop&amp;w=900&amp;q=80" alt="Pre-Wedding" onclick="openImg(this.src, 'Pre-Wedding — Nayan Digital')" />
+          <h3>Pre-Wedding Couple</h3>
+          <p>Category: Pre-Wedding</p>
+        </div>
+        <div class="card p-item" data-cat="Haldi">
+          <img class="card-img" src="https://images.unsplash.com/photo-1583939003579-730e3918a45a?auto=format&amp;fit=crop&amp;w=900&amp;q=80" alt="Haldi" onclick="openImg(this.src, 'Haldi Celebration — Nayan Digital')" />
+          <h3>Haldi Celebration</h3>
+          <p>Category: Haldi</p>
+        </div>
+        <div class="card p-item" data-cat="Engagement">
+          <img class="card-img" src="https://images.unsplash.com/photo-1511285560929-80b456fea0bc?auto=format&amp;fit=crop&amp;w=900&amp;q=80" alt="Engagement" onclick="openImg(this.src, 'Engagement — Nayan Digital')" />
+          <h3>Engagement Moment</h3>
+          <p>Category: Engagement</p>
+        </div>
+        <div class="card p-item" data-cat="Birthday">
+          <img class="card-img" src="https://images.unsplash.com/photo-1530103862676-de8c9debad1d?auto=format&amp;fit=crop&amp;w=900&amp;q=80" alt="Birthday" onclick="openImg(this.src, 'Birthday Event — Nayan Digital')" />
+          <h3>Birthday Event</h3>
+          <p>Category: Birthday</p>
+        </div>
+        <div class="card p-item" data-cat="Portrait">
+          <img class="card-img" src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&amp;fit=crop&amp;w=900&amp;q=80" alt="Portrait" onclick="openImg(this.src, 'Studio Portrait — Nayan Digital')" />
+          <h3>Studio Portrait</h3>
+          <p>Category: Portrait</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 7. Video Gallery -->
+  <section class="block" id="videos">
+    <div class="wrap">
+      <div class="sec-head">
+        <div class="sec-sub">Video Gallery</div>
+        <h2 class="sec-title">Wedding Highlights &amp; Pre-Wedding Films</h2>
       </div>
       <div class="grid-2">
-        <div class="lux-card">
-          <h3>HIGHLIGHT REEL SLOT</h3>
-          <p>Reserved for your own studio reel or drone showcase link. Add your own video URL anytime in <code>index.html</code>.</p>
+        <div class="card">
+          <div class="vid-thumb">WEDDING HIGHLIGHTS SHOWCASE<br />Add Your Video / Reel Link</div>
+          <h3>Wedding Highlights</h3>
+          <p>Dedicated showcase slot for your wedding highlight video or clip.</p>
         </div>
-        <div class="lux-card">
-          <h3>EVENT FILM PREVIEW SLOT</h3>
-          <p>Reserved for your own wedding teaser or event highlight clip.</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section class="sec dark" id="gallery">
-    <div class="wrap">
-      <div class="sec-top">
-        <div class="sec-kicker">03 • STUDIO &amp; GALLERY</div>
-        <h2 class="sec-h2">SERVICES &amp; ITEMS</h2>
-      </div>
-      <div class="grid-2">
-        <div class="lux-card">
-          <h3>PHOTOGRAPHY, ALBUMS &amp; FRAMES</h3>
-          <ul class="lux-list">
-            <li>Wedding, Pre-Wedding &amp; Event Photography</li>
-            <li>Drone Videography &amp; Video Production</li>
-            <li>Luxury Photo Albums &amp; Layout Design</li>
-            <li>Frames, Gift Frames &amp; Studio Prints</li>
-            <li>Banners, Posters &amp; Graphic Layouts</li>
-          </ul>
-        </div>
-        <div class="lux-card">
-          <h3>PRINTING, ACCESSORIES &amp; DIGITAL</h3>
-          <ul class="lux-list">
-            <li>Passport Photos &amp; Instant Print</li>
-            <li>Xerox, Document Printing &amp; Scanning</li>
-            <li>Mobile Accessories &amp; Studio Essentials</li>
-            <li>Online Applications, e-KYC &amp; Citizen Services</li>
-            <li>Serving Khambala, Kinwat &amp; Nanded</li>
-          </ul>
+        <div class="card">
+          <div class="vid-thumb">PRE-WEDDING FILMS SHOWCASE<br />Add Your Video / Reel Link</div>
+          <h3>Pre-Wedding Films</h3>
+          <p>Dedicated showcase slot for your pre-wedding teaser or cinematic reel.</p>
         </div>
       </div>
     </div>
   </section>
 
-  <section class="sec" id="booking">
+  <!-- 8. Packages & Pricing -->
+  <section class="block alt" id="packages">
     <div class="wrap">
-      <div class="sec-top">
-        <div class="sec-kicker">04 • RESERVATIONS</div>
-        <h2 class="sec-h2">WHATSAPP BOOKING</h2>
-      </div>
-      <div class="grid-2">
-        <div class="lux-card">
-          <form onsubmit="sendBooking(event)">
-            <div class="field">
-              <label for="bName">CLIENT NAME</label>
-              <input type="text" id="bName" required placeholder="Your name" />
-            </div>
-            <div class="field">
-              <label for="bPhone">PHONE NUMBER</label>
-              <input type="tel" id="bPhone" required placeholder="10-digit mobile number" />
-            </div>
-            <div class="field">
-              <label for="bType">SERVICE / PACKAGE</label>
-              <select id="bType">
-                <option value="Wedding / Pre-Wedding Shoot">Wedding / Pre-Wedding Shoot</option>
-                <option value="Drone & Videography">Drone &amp; Videography</option>
-                <option value="Albums, Frames & Prints">Albums, Frames &amp; Prints</option>
-                <option value="Studio, Xerox & Digital Services">Studio, Xerox &amp; Digital Services</option>
-              </select>
-            </div>
-            <div class="field">
-              <label for="bNote">EVENT DATE &amp; DETAILS</label>
-              <textarea id="bNote" rows="3" placeholder="Date, venue, or details"></textarea>
-            </div>
-            <button type="submit" class="btn btn-wa" style="width:100%;">SEND ON WHATSAPP</button>
-          </form>
-        </div>
-
-        <div class="lux-card">
-          <h3>STUDIO DESK</h3>
-          <p style="margin-bottom:12px;"><strong>BRAND:</strong> NAYAN DIGITAL</p>
-          <p style="margin-bottom:12px;"><strong>LOCATION:</strong> KHAMBALA, KINWAT, NANDED</p>
-          <p style="margin-bottom:12px;"><strong>WHATSAPP:</strong> Set <code>WA_NUMBER</code> in code</p>
-          <p><strong>URL:</strong> https://jarvisrosha.github.io/nayandigital/</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section class="sec dark" id="update">
-    <div class="wrap">
-      <div class="sec-top">
-        <div class="sec-kicker">05 • CONTROL &amp; SAFETY</div>
-        <h2 class="sec-h2">UPDATE &amp; SECURITY</h2>
+      <div class="sec-head">
+        <div class="sec-sub">Packages &amp; Pricing</div>
+        <h2 class="sec-title">Our Photography Packages</h2>
       </div>
       <div class="grid-3">
-        <div class="lux-card">
-          <h3>EASY UPDATES</h3>
-          <p>Edit <code>index.html</code> anytime in GitHub and commit changes to update the live website.</p>
+        <div class="card">
+          <h3>Basic Package</h3>
+          <div class="price-lbl" id="pBasic">Custom Price</div>
+          <ul class="feat-list">
+            <li>Photography</li>
+            <li>Selected Edited Photos</li>
+            <li>Digital Delivery</li>
+          </ul>
         </div>
-        <div class="lux-card">
-          <h3>ACCOUNT SAFETY</h3>
-          <p>Keep your GitHub password private and enable Two-Factor Authentication (2FA) for strong account protection.</p>
+        <div class="card featured">
+          <span class="badge-pop">Popular</span>
+          <h3>Premium Package</h3>
+          <div class="price-lbl" id="pPremium">Custom Price</div>
+          <ul class="feat-list">
+            <li>Photography</li>
+            <li>Videography</li>
+            <li>Cinematic Highlights</li>
+            <li>Wedding Album</li>
+          </ul>
         </div>
-        <div class="lux-card">
-          <h3>PAGES &amp; DOMAIN</h3>
-          <p>Manage live hosting and custom domain connection under Repository Settings &gt; Pages.</p>
+        <div class="card">
+          <h3>Luxury Package</h3>
+          <div class="price-lbl" id="pLuxury">Custom Price</div>
+          <ul class="feat-list">
+            <li>Complete Wedding Coverage</li>
+            <li>Cinematic Film</li>
+            <li>Pre-Wedding</li>
+            <li>Premium Album</li>
+          </ul>
         </div>
       </div>
     </div>
   </section>
 
-  <div class="modal" id="previewModal" onclick="closePreview(event)">
-    <div class="modal-box">
-      <button type="button" class="modal-x" onclick="closePreview(event)">CLOSE</button>
-      <img id="previewImg" src="" alt="Preview" />
-      <p id="previewCaption" style="margin-top:12px; color:var(--gold); font-weight:600;"></p>
+  <!-- 9. Online Booking System -->
+  <section class="block" id="booking">
+    <div class="wrap">
+      <div class="sec-head">
+        <div class="sec-sub">Online Booking System</div>
+        <h2 class="sec-title">Book Your Event</h2>
+      </div>
+      <div class="card" style="max-width:740px;">
+        <form onsubmit="handleBooking(event)">
+          <div class="field">
+            <label for="fName">1. Customer Name</label>
+            <input type="text" id="fName" required placeholder="Your full name" />
+          </div>
+          <div class="field">
+            <label for="fPhone">2. Mobile Number</label>
+            <input type="tel" id="fPhone" required placeholder="10-digit mobile number" />
+          </div>
+          <div class="field">
+            <label for="fEmail">3. Email Address</label>
+            <input type="email" id="fEmail" placeholder="your@email.com" />
+          </div>
+          <div class="field">
+            <label for="fType">4. Event Type</label>
+            <select id="fType">
+              <option value="Wedding">Wedding</option>
+              <option value="Pre-Wedding">Pre-Wedding</option>
+              <option value="Haldi / Engagement">Haldi / Engagement</option>
+              <option value="Birthday / Event">Birthday / Event</option>
+              <option value="Studio / Album / Print">Studio / Album / Print</option>
+            </select>
+          </div>
+          <div class="field">
+            <label for="fDate">5. Event Date</label>
+            <input type="date" id="fDate" />
+          </div>
+          <div class="field">
+            <label for="fLoc">6. Event Location</label>
+            <input type="text" id="fLoc" placeholder="Village, Taluka, District" />
+          </div>
+          <div class="field">
+            <label for="fMsg">7. Message</label>
+            <textarea id="fMsg" rows="3" placeholder="Package or extra details"></textarea>
+          </div>
+          <button type="submit" class="btn btn-wa" style="width:100%;">Submit &amp; Send on WhatsApp</button>
+        </form>
+        <div class="confirm-box" id="confirmBox"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 10. Customer Reviews -->
+  <section class="block alt" id="reviews">
+    <div class="wrap">
+      <div class="sec-head">
+        <div class="sec-sub">Customer Reviews</div>
+        <h2 class="sec-title">Client Feedback</h2>
+      </div>
+      <div class="grid-2" id="reviewsGrid">
+        <div class="card">
+          <p style="color:var(--ivory); font-style:italic;">"Beautiful photography and amazing service. Thank you Nayan Digital!"</p>
+          <p style="margin-top:10px; color:var(--gold); font-size:0.85rem;">— Client Review (Khambala)</p>
+        </div>
+        <div class="card">
+          <p style="color:var(--ivory); font-style:italic;">"Great video highlights and friendly studio support for our family event."</p>
+          <p style="margin-top:10px; color:var(--gold); font-size:0.85rem;">— Client Review (Kinwat)</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 11. Contact Us -->
+  <section class="block" id="contact">
+    <div class="wrap">
+      <div class="sec-head">
+        <div class="sec-sub">Contact Us</div>
+        <h2 class="sec-title">Studio Location &amp; Direct Links</h2>
+      </div>
+      <div class="grid-2">
+        <div class="card">
+          <h3>NAYAN DIGITAL</h3>
+          <p style="margin-bottom:8px;"><strong>Address:</strong> Khambala, Taluka Kinwat, District Nanded, Maharashtra</p>
+          <p style="margin-bottom:8px;" id="cPhoneText"><strong>Mobile / WhatsApp:</strong> Set in Admin or Code</p>
+          <p style="margin-bottom:8px;" id="cEmailText"><strong>Email:</strong> Set in Admin or Code</p>
+          <p style="margin-bottom:14px;" id="cSocialText"><strong>Social Links:</strong> Instagram • YouTube</p>
+          <a id="mapLinkBtn" href="https://www.google.com/maps/search/?api=1&query=Khambala+Kinwat+Nanded+Maharashtra" target="_blank" class="btn btn-gold">Open Google Maps</a>
+        </div>
+        <div class="card">
+          <h3>Quick Studio Connect</h3>
+          <p style="margin-bottom:14px;">Connect directly on WhatsApp for shoot availability, packages, albums, frames, or studio services.</p>
+          <a id="contactWaBtn" href="#booking" class="btn btn-wa">Chat on WhatsApp</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 13. Owner-Only Admin Panel (Hidden from clients) -->
+  <section class="block alt" id="adminSection">
+    <div class="wrap">
+      <div id="adminPanel">
+        <div class="sec-sub">Owner Only • Admin Panel</div>
+        <h2 class="sec-title" style="margin-bottom:16px;">Studio Quick Editor (Browser Preview)</h2>
+        <div class="grid-2">
+          <div class="field">
+            <label>Studio Tagline</label>
+            <input type="text" id="edTagline" />
+          </div>
+          <div class="field">
+            <label>WhatsApp Number (91 + 10 digits)</label>
+            <input type="text" id="edWa" />
+          </div>
+          <div class="field">
+            <label>Basic Package Label</label>
+            <input type="text" id="edBasic" />
+          </div>
+          <div class="field">
+            <label>Premium Package Label</label>
+            <input type="text" id="edPremium" />
+          </div>
+          <div class="field">
+            <label>Luxury Package Label</label>
+            <input type="text" id="edLuxury" />
+          </div>
+          <div class="field">
+            <label>Email Address</label>
+            <input type="text" id="edEmail" />
+          </div>
+        </div>
+        <div style="display:flex; gap:10px; flex-wrap:wrap; margin-top:8px;">
+          <button type="button" class="btn btn-gold" onclick="saveAdminChanges()">Apply Changes</button>
+          <button type="button" class="btn btn-outline" onclick="resetAdminChanges()">Reset Default</button>
+          <button type="button" class="btn btn-outline" onclick="lockAdmin()">Lock Panel</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 12. WhatsApp Floating Button -->
+  <a id="floatingWa" class="wa-float" href="#booking">WhatsApp</a>
+
+  <div class="modal" id="imgModal" onclick="closeImg(event)">
+    <div class="modal-inner">
+      <button type="button" class="modal-close" onclick="closeImg(event)">Close</button>
+      <img id="modalPic" src="" alt="Full Photo" />
+      <p id="modalCap" style="margin-top:10px; color:var(--gold); font-weight:600;"></p>
     </div>
   </div>
 
   <footer>
-    NAYAN DIGITAL • KHAMBALA • ALL RIGHTS RESERVED
+    <div>NAYAN DIGITAL • KHAMBALA, KINWAT, NANDED</div>
+    <button type="button" class="owner-trigger" onclick="unlockAdmin()">Owner Admin</button>
   </footer>
 
   <script>
-    const WA_NUMBER = "910000000000";
+    // Change OWNER_PIN and DEFAULT_WA as needed
+    const OWNER_PIN = "2026";
+    const DEFAULT_WA = "910000000000";
 
-    function openPreview(src, caption) {
-      document.getElementById("previewImg").src = src;
-      document.getElementById("previewCaption").innerText = caption;
-      document.getElementById("previewModal").classList.add("open");
-    }
+    const defaults = {
+      tagline: '"Capturing Your Beautiful Moments Forever."',
+      wa: DEFAULT_WA,
+      basic: "Custom Price",
+      premium: "Custom Price",
+      luxury: "Custom Price",
+      email: "Not set"
+    };
 
-    function closePreview(e) {
-      if (e.target.id === "previewModal" || e.target.classList.contains("modal-x")) {
-        document.getElementById("previewModal").classList.remove("open");
+    function getSiteData() {
+      try {
+        return { ...defaults, ...(JSON.parse(localStorage.getItem("nd_site_cfg")) || {}) };
+      } catch (e) {
+        return defaults;
       }
     }
 
-    function sendBooking(e) {
-      e.preventDefault();
-      const name = document.getElementById("bName").value.trim();
-      const phone = document.getElementById("bPhone").value.trim();
-      const type = document.getElementById("bType").value;
-      const note = document.getElementById("bNote").value.trim() || "None";
-      const text = `NAYAN DIGITAL BOOKING\nName: ${name}\nPhone: ${phone}\nService: ${type}\nDetails: ${note}`;
-      window.open(`https://wa.me/${WA_NUMBER}?text=${encodeURIComponent(text)}`, "_blank");
+    function applySiteData() {
+      const cfg = getSiteData();
+      document.getElementById("heroTagline").innerText = cfg.tagline;
+      document.getElementById("pBasic").innerText = cfg.basic;
+      document.getElementById("pPremium").innerText = cfg.premium;
+      document.getElementById("pLuxury").innerText = cfg.luxury;
+      document.getElementById("cEmailText").innerHTML = `<strong>Email:</strong> ${cfg.email}`;
+
+      const waUrl = `https://wa.me/${cfg.wa}?text=${encodeURIComponent("Hello Nayan Digital, I want to inquire about photography/studio services.")}`;
+      document.getElementById("floatingWa").href = waUrl;
+      document.getElementById("contactWaBtn").href = waUrl;
+      if (cfg.wa !== "910000000000") {
+        document.getElementById("cPhoneText").innerHTML = `<strong>Mobile / WhatsApp:</strong> +${cfg.wa}`;
+      }
     }
+
+    function unlockAdmin() {
+      const entered = prompt("Enter Owner PIN:");
+      if (entered === OWNER_PIN) {
+        const cfg = getSiteData();
+        document.getElementById("edTagline").value = cfg.tagline;
+        document.getElementById("edWa").value = cfg.wa;
+        document.getElementById("edBasic").value = cfg.basic;
+        document.getElementById("edPremium").value = cfg.premium;
+        document.getElementById("edLuxury").value = cfg.luxury;
+        document.getElementById("edEmail").value = cfg.email;
+        document.getElementById("adminPanel").classList.add("active");
+        document.getElementById("adminPanel").scrollIntoView({ behavior: "smooth" });
+      } else if (entered !== null) {
+        alert("Incorrect PIN.");
+      }
+    }
+
+    function saveAdminChanges() {
+      const updated = {
+        tagline: document.getElementById("edTagline").value.trim() || defaults.tagline,
+        wa: document.getElementById("edWa").value.trim() || defaults.wa,
+        basic: document.getElementById("edBasic").value.trim() || defaults.basic,
+        premium: document.getElementById("edPremium").value.trim() || defaults.premium,
+        luxury: document.getElementById("edLuxury").value.trim() || defaults.luxury,
+        email: document.getElementById("edEmail").value.trim() || defaults.email
+      };
+      localStorage.setItem("nd_site_cfg", JSON.stringify(updated));
+      applySiteData();
+      alert("Updated in this browser.");
+    }
+
+    function resetAdminChanges() {
+      localStorage.removeItem("nd_site_cfg");
+      applySiteData();
+      unlockAdmin();
+    }
+
+    function lockAdmin() {
+      document.getElementById("adminPanel").classList.remove("active");
+    }
+
+    function filterItems(cat, btn) {
+      document.querySelectorAll(".filter-btn").forEach(b => b.classList.remove("active"));
+      if (btn) btn.classList.add("active");
+      document.querySelectorAll(".p-item").forEach(item => {
+        item.style.display = (cat === "All" || item.dataset.cat === cat) ? "" : "none";
+      });
+    }
+
+    function openImg(src, cap) {
+      document.getElementById("modalPic").src = src;
+      document.getElementById("modalCap").innerText = cap;
+      document.getElementById("imgModal").classList.add("open");
+    }
+
+    function closeImg(e) {
+      if (e.target.id === "imgModal" || e.target.classList.contains("modal-close")) {
+        document.getElementById("imgModal").classList.remove("open");
+      }
+    }
+
+    function handleBooking(e) {
+      e.preventDefault();
+      const cfg = getSiteData();
+      const name = document.getElementById("fName").value.trim();
+      const phone = document.getElementById("fPhone").value.trim();
+      const email = document.getElementById("fEmail").value.trim() || "Not provided";
+      const type = document.getElementById("fType").value;
+      const date = document.getElementById("fDate").value || "Not selected";
+      const loc = document.getElementById("fLoc").value.trim() || "Not provided";
+      const msg = document.getElementById("fMsg").value.trim() || "None";
+
+      const box = document.getElementById("confirmBox");
+      box.classList.add("show");
+      box.innerHTML =
+        `<strong>Booking Inquiry Ready (Status: Pending)</strong><br>` +
+        `Name: ${name} | Phone: ${phone} | Event: ${type} | Date: ${date} | Location: ${loc}`;
+
+      const waText =
+        `NAYAN DIGITAL BOOKING\n` +
+        `Name: ${name}\n` +
+        `Mobile: ${phone}\n` +
+        `Email: ${email}\n` +
+        `Event Type: ${type}\n` +
+        `Event Date: ${date}\n` +
+        `Location: ${loc}\n` +
+        `Message: ${msg}`;
+
+      window.open(`https://wa.me/${cfg.wa}?text=${encodeURIComponent(waText)}`, "_blank");
+    }
+
+    applySiteData();
   </script>
 </body>
 </html>
