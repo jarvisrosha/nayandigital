@@ -19,7 +19,6 @@
       --gold: #b48327;
       --border: #e5e7eb;
       --wa: #16a34a;
-      --logo-angle: -90deg;
     }
 
     * {
@@ -49,63 +48,33 @@
       background: rgba(255, 255, 255, 0.96);
       backdrop-filter: blur(10px);
       border-bottom: 1px solid var(--border);
-      padding: 12px 22px;
+      padding: 14px 28px;
       display: flex;
       flex-wrap: wrap;
       align-items: center;
       justify-content: space-between;
-      gap: 12px;
-    }
-
-    .brand-box {
-      display: flex;
-      align-items: center;
-      gap: 12px;
-      text-decoration: none;
-    }
-
-    .logo-circle-sm {
-      width: 50px;
-      height: 50px;
-      border-radius: 50%;
-      border: 2px solid var(--gold);
-      background: var(--soft);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      overflow: hidden;
-      flex-shrink: 0;
-      padding: 3px;
-      font-weight: 700;
-      color: var(--accent);
-    }
-
-    .logo-circle-sm img {
-      width: 100%;
-      height: 100%;
-      object-fit: contain;
-      border-radius: 50%;
-      transform: rotate(var(--logo-angle));
+      gap: 16px;
     }
 
     .brand-name {
       color: var(--ink);
-      font-size: 0.98rem;
+      font-size: 1.05rem;
       font-weight: 700;
-      letter-spacing: 0.7px;
+      letter-spacing: 0.8px;
       text-transform: uppercase;
+      text-decoration: none;
     }
 
     nav {
       display: flex;
       flex-wrap: wrap;
-      gap: 14px;
+      gap: 18px;
     }
 
     nav a {
       color: var(--ink-2);
       text-decoration: none;
-      font-size: 0.76rem;
+      font-size: 0.78rem;
       font-weight: 600;
       letter-spacing: 0.8px;
       text-transform: uppercase;
@@ -117,40 +86,14 @@
 
     /* Hero */
     .hero {
-      padding: 60px 22px 46px;
+      padding: 64px 28px 48px;
       text-align: center;
       background: linear-gradient(180deg, #f8fafc 0%, #ffffff 100%);
       border-bottom: 1px solid var(--border);
     }
 
-    .logo-circle-lg {
-      width: 164px;
-      height: 164px;
-      margin: 0 auto 20px;
-      border-radius: 50%;
-      border: 2.5px solid var(--gold);
-      background: var(--soft);
-      box-shadow: 0 14px 34px rgba(15, 23, 42, 0.1);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      overflow: hidden;
-      padding: 6px;
-      font-size: 1.6rem;
-      font-weight: 700;
-      color: var(--accent);
-    }
-
-    .logo-circle-lg img {
-      width: 100%;
-      height: 100%;
-      object-fit: contain;
-      border-radius: 50%;
-      transform: rotate(var(--logo-angle));
-    }
-
     .hero h1 {
-      font-size: clamp(1.85rem, 4.4vw, 2.95rem);
+      font-size: clamp(2rem, 4.6vw, 3.15rem);
       font-weight: 700;
       color: var(--ink);
       text-transform: uppercase;
@@ -160,14 +103,14 @@
     .hero-tag {
       color: var(--gold);
       font-style: italic;
-      font-size: clamp(1rem, 2.2vw, 1.28rem);
+      font-size: clamp(1.05rem, 2.2vw, 1.32rem);
       margin-bottom: 8px;
     }
 
     .hero-sub {
       color: var(--muted);
-      font-size: 0.9rem;
-      margin-bottom: 22px;
+      font-size: 0.92rem;
+      margin-bottom: 24px;
     }
 
     .btn-group {
@@ -211,56 +154,51 @@
       border: 1px solid var(--border);
     }
 
-    /* Motion Photo Slider */
-    .showcase-slider {
+    /* Wide Photo Slider */
+    .slider-sec {
       background: var(--soft);
       border-bottom: 1px solid var(--border);
-      padding: 28px 22px;
+      padding: 28px;
     }
 
-    .slider-stage {
-      max-width: 920px;
+    .slider-wide {
+      max-width: 1240px;
       margin: 0 auto;
       background: #ffffff;
       border: 1px solid var(--border);
       border-radius: 18px;
-      padding: 16px;
+      padding: 18px;
       box-shadow: 0 10px 28px rgba(15, 23, 42, 0.05);
     }
 
-    .slide-frame {
+    .slide-img-box {
       width: 100%;
-      height: 300px;
+      height: 340px;
       border-radius: 12px;
-      background: #f1f5f9;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      text-align: center;
-      padding: 20px;
       overflow: hidden;
+      background: #f1f5f9;
       position: relative;
     }
 
-    .slide-frame img {
+    .slide-img-box img {
       width: 100%;
       height: 100%;
       object-fit: cover;
-      border-radius: 10px;
+      display: block;
     }
 
-    .slide-controls {
+    .slide-bar {
       display: flex;
+      flex-wrap: wrap;
       align-items: center;
       justify-content: space-between;
       gap: 12px;
-      margin-top: 12px;
-      flex-wrap: wrap;
+      margin-top: 14px;
     }
 
-    /* Sections */
+    /* Landscape Wide Sections */
     section.sec {
-      padding: 62px 22px;
+      padding: 60px 28px;
       border-bottom: 1px solid var(--border);
     }
 
@@ -268,8 +206,8 @@
       background: var(--soft);
     }
 
-    .container {
-      max-width: 1140px;
+    .wide-wrap {
+      max-width: 1240px;
       margin: 0 auto;
     }
 
@@ -287,21 +225,30 @@
     }
 
     .sec-title {
-      font-size: clamp(1.4rem, 3vw, 2.05rem);
+      font-size: clamp(1.45rem, 3vw, 2.1rem);
       font-weight: 700;
       color: var(--ink);
     }
 
-    .grid-3 {
+    .grid-3-wide {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      grid-template-columns: repeat(3, minmax(0, 1fr));
       gap: 20px;
     }
 
-    .grid-2 {
+    .grid-2-wide {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-      gap: 22px;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 24px;
+    }
+
+    @media (max-width: 900px) {
+      .grid-3-wide, .grid-2-wide {
+        grid-template-columns: 1fr;
+      }
+      .slide-img-box {
+        height: 220px;
+      }
     }
 
     .card {
@@ -310,56 +257,17 @@
       border-radius: 16px;
       padding: 20px;
       box-shadow: 0 6px 20px rgba(15, 23, 42, 0.04);
-      transition: transform 0.25s ease;
     }
 
-    .card:hover {
-      transform: translateY(-3px);
-    }
-
-    .card.selectable {
-      cursor: pointer;
-    }
-
-    .card.featured {
-      border: 2px solid var(--gold);
-    }
-
-    .badge {
-      display: inline-block;
-      background: #fef3c7;
-      color: #92400e;
-      font-size: 0.72rem;
-      font-weight: 700;
-      padding: 3px 10px;
-      border-radius: 999px;
-      margin-bottom: 8px;
-      text-transform: uppercase;
-    }
-
-    .slot-box {
+    .photo-thumb {
       width: 100%;
-      height: 190px;
-      border-radius: 12px;
-      background: var(--soft);
-      border: 1px dashed #cbd5e1;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      text-align: center;
-      padding: 14px;
-      margin-bottom: 12px;
-      color: var(--muted);
-      font-size: 0.85rem;
-      overflow: hidden;
-      cursor: pointer;
-    }
-
-    .slot-box img {
-      width: 100%;
-      height: 100%;
+      height: 205px;
       object-fit: cover;
-      border-radius: 10px;
+      border-radius: 12px;
+      margin-bottom: 12px;
+      cursor: pointer;
+      display: block;
+      background: var(--soft);
     }
 
     .card h3 {
@@ -371,35 +279,6 @@
     .card p {
       color: var(--muted);
       font-size: 0.92rem;
-    }
-
-    .price {
-      font-size: 1.4rem;
-      font-weight: 700;
-      color: var(--gold);
-      margin: 8px 0 10px;
-    }
-
-    .pkg-detail-box {
-      margin-top: 20px;
-      padding: 20px;
-      border-radius: 14px;
-      background: #ffffff;
-      border: 1.5px solid var(--gold);
-    }
-
-    .list {
-      list-style: none;
-      display: grid;
-      gap: 7px;
-      color: var(--ink-2);
-      font-size: 0.9rem;
-    }
-
-    .list li::before {
-      content: "• ";
-      color: var(--gold);
-      font-weight: 700;
     }
 
     .filters {
@@ -424,6 +303,32 @@
       color: #ffffff;
       border-color: var(--accent);
       font-weight: 600;
+    }
+
+    /* Interactive Step Builder */
+    .choice-group {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-top: 8px;
+      margin-bottom: 16px;
+    }
+
+    .choice-chip {
+      background: var(--soft);
+      color: var(--ink-2);
+      border: 1px solid #d1d5db;
+      padding: 8px 14px;
+      border-radius: 999px;
+      font-size: 0.83rem;
+      font-weight: 600;
+      cursor: pointer;
+    }
+
+    .choice-chip.selected {
+      background: var(--accent);
+      color: #ffffff;
+      border-color: var(--accent);
     }
 
     .field {
@@ -451,22 +356,16 @@
       font-size: 0.94rem;
     }
 
-    .summary-box {
-      display: none;
-      margin-top: 14px;
-      padding: 12px;
-      border-radius: 10px;
-      background: #f0fdf4;
-      border: 1px solid #86efac;
-      color: #14532d;
+    .collected-box {
+      padding: 14px;
+      border-radius: 12px;
+      background: var(--soft);
+      border: 1px solid var(--border);
+      margin-bottom: 14px;
       font-size: 0.88rem;
+      color: var(--ink-2);
     }
 
-    .summary-box.show {
-      display: block;
-    }
-
-    /* Hidden Owner Panel */
     #ownerBox {
       display: none;
       margin-top: 24px;
@@ -512,7 +411,7 @@
 
     .modal-inner {
       position: relative;
-      max-width: 860px;
+      max-width: 880px;
       width: 100%;
       background: #ffffff;
       border-radius: 16px;
@@ -522,7 +421,7 @@
 
     .modal-inner img {
       max-width: 100%;
-      max-height: 74vh;
+      max-height: 75vh;
       border-radius: 10px;
       object-fit: contain;
     }
@@ -562,96 +461,117 @@
 <body>
 
   <header>
-    <a href="#" class="brand-box">
-      <div class="logo-circle-sm">
-        <img src="logo.png(1).png" alt="Logo" onerror="if(!this.dataset.f){this.dataset.f='1';this.src='logo.png';}else{this.remove();}" />
-        <span>ND</span>
-      </div>
-      <span class="brand-name">NAYAN DIGITAL PHOTO &amp; VIDEO STUDIO KHAMBALA</span>
-    </a>
+    <a href="#" class="brand-name">NAYAN DIGITAL PHOTO &amp; VIDEO STUDIO KHAMBALA</a>
     <nav>
-      <a href="#about">About</a>
+      <a href="#top-booking">Book Now</a>
       <a href="#cameras">Cameras &amp; Gear</a>
       <a href="#portfolio">Portfolio</a>
-      <a href="#videos">Videos</a>
-      <a href="#packages">Packages</a>
-      <a href="#booking">Booking</a>
+      <a href="#step-builder">Step Selection</a>
+      <a href="#bottom-booking">Booking Form</a>
       <a href="#contact">Contact</a>
     </nav>
   </header>
 
   <section class="hero">
-    <div class="logo-circle-lg">
-      <img src="logo.png(1).png" alt="Nayan Digital Logo" onerror="if(!this.dataset.f){this.dataset.f='1';this.src='logo.png';}else{this.remove();}" />
-      <span>ND</span>
-    </div>
     <h1>NAYAN DIGITAL PHOTO &amp; VIDEO STUDIO KHAMBALA</h1>
     <div class="hero-tag">"Capturing Your Beautiful Moments Forever."</div>
-    <div class="hero-sub">Wedding • Pre-Wedding • Cinematic Films • Drone • Studio &amp; Digital Services</div>
+    <div class="hero-sub">Wedding • Pre-Wedding • Haldi • Engagement • Birthday • Drone &amp; Event</div>
     <div class="btn-group">
-      <a href="#booking" class="btn btn-dark">Book Your Event</a>
-      <a href="#portfolio" class="btn btn-light">View Our Work</a>
-      <a id="heroWaLink" href="#" target="_blank" class="btn btn-wa">WhatsApp: 9923565358</a>
+      <a href="#top-booking" class="btn btn-dark">Book Your Event</a>
+      <a id="heroInstaBtn" href="https://www.instagram.com/nayandigitalkhambala?cnvx=MTZtN2swNGtybXpiYg==" target="_blank" class="btn btn-light">View Shoots &amp; Videos on Instagram</a>
+      <a id="heroWaBtn" href="#" target="_blank" class="btn btn-wa">WhatsApp: 9923565358</a>
     </div>
   </section>
 
-  <!-- Motion Photo Slider -->
-  <div class="showcase-slider">
-    <div class="slider-stage">
-      <div class="slide-frame" id="slideDisplay">
-        <div id="slideTextBox">
-          <div class="sec-kicker" id="slideCat">SLIDE 1 OF 4 • MOTION SHOWCASE</div>
-          <h3 id="slideHeading" style="font-size:1.5rem; margin:6px 0;">Wedding &amp; Pre-Wedding Motion Showcase</h3>
-          <p id="slideDesc">Upload your own photos to the GitHub repository and add their file names in Owner Admin or index.html to see them slide here.</p>
-        </div>
+  <!-- Wide Photo Slider -->
+  <div class="slider-sec">
+    <div class="slider-wide">
+      <div class="slide-img-box">
+        <img id="mainSlideImg" src="https://images.unsplash.com/photo-1519741497674-611481863552?auto=format&amp;fit=crop&amp;w=1200&amp;q=80" alt="Shoot Showcase Slide" />
       </div>
-      <div class="slide-controls">
-        <div style="display:flex; gap:8px;">
-          <button type="button" class="btn btn-light" onclick="prevSlide()">Prev Slide</button>
-          <button type="button" class="btn btn-dark" onclick="nextSlide()">Next Slide</button>
+      <div class="slide-bar">
+        <div>
+          <strong id="mainSlideLabel">Wedding Shoot Showcase</strong>
+          <div style="font-size:0.84rem; color:var(--muted);">Click photo to enlarge or watch shoots on Instagram</div>
         </div>
-        <span style="font-size:0.82rem; color:var(--muted);">Smooth Motion Showcase • Auto &amp; Manual Slide</span>
+        <div style="display:flex; gap:8px; flex-wrap:wrap;">
+          <button type="button" class="btn btn-light" onclick="prevSlide()">Prev</button>
+          <button type="button" class="btn btn-dark" onclick="nextSlide()">Next</button>
+          <a id="slideInstaLink" href="https://www.instagram.com/nayandigitalkhambala?cnvx=MTZtN2swNGtybXpiYg==" target="_blank" class="btn btn-wa">Open Instagram</a>
+        </div>
       </div>
     </div>
   </div>
 
-  <!-- About Us -->
-  <section class="sec" id="about">
-    <div class="container">
+  <!-- Top Booking Section (Landscape 2-Column) -->
+  <section class="sec" id="top-booking">
+    <div class="wide-wrap">
       <div class="sec-head">
-        <div class="sec-kicker">About Us</div>
-        <h2 class="sec-title">Welcome to Nayan Digital Photo &amp; Video Studio</h2>
+        <div class="sec-kicker">Quick Reservation</div>
+        <h2 class="sec-title">Book Your Event</h2>
       </div>
-      <div class="card">
-        <p style="color:var(--ink-2); margin-bottom:10px;">
-          We capture your precious moments and transform them into lasting memories with thoughtful photography, cinematic storytelling, and studio service.
-        </p>
-        <p style="color:var(--gold); font-weight:600;">
-          Location: Khambala, Taluka Kinwat, District Nanded, Maharashtra.
-        </p>
+      <div class="grid-2-wide">
+        <div class="card">
+          <form onsubmit="submitQuickBooking(event, 'topStatus')">
+            <div class="field">
+              <label>1. Customer Name</label>
+              <input type="text" id="tName" required placeholder="Client name" />
+            </div>
+            <div class="field">
+              <label>2. Customer Mobile Number</label>
+              <input type="tel" id="tMobile" required placeholder="Client 10-digit mobile number" />
+            </div>
+            <div class="field">
+              <label>3. Event Type</label>
+              <select id="tEvent">
+                <option value="Wedding">Wedding</option>
+                <option value="Pre-Wedding">Pre-Wedding</option>
+                <option value="Haldi">Haldi</option>
+                <option value="Engagement">Engagement</option>
+                <option value="Birthday">Birthday</option>
+                <option value="Drone & Event">Drone &amp; Event</option>
+              </select>
+            </div>
+            <div class="field">
+              <label>4. Event Date &amp; Location</label>
+              <input type="text" id="tDateLoc" placeholder="Date, Village, Taluka, District" />
+            </div>
+            <button type="submit" class="btn btn-wa" style="width:100%;">Confirm &amp; Send on WhatsApp</button>
+          </form>
+          <div class="collected-box" id="topStatus" style="display:none; margin-top:12px;"></div>
+        </div>
+
+        <div class="card">
+          <h3>Studio Direct Info</h3>
+          <p style="margin-bottom:10px;"><strong>Studio:</strong> Nayan Digital Photo &amp; Video Studio Khambala</p>
+          <p style="margin-bottom:10px;"><strong>Location:</strong> Khambala, Taluka Kinwat, District Nanded, Maharashtra</p>
+          <p style="margin-bottom:10px;"><strong>WhatsApp:</strong> +91 9923565358</p>
+          <p style="margin-bottom:16px;"><strong>Email:</strong> nayandigitalkhambala@gmail.com</p>
+          <a id="topInstaBtn" href="https://www.instagram.com/nayandigitalkhambala?cnvx=MTZtN2swNGtybXpiYg==" target="_blank" class="btn btn-dark">See Full Shoots &amp; Videos on Instagram</a>
+        </div>
       </div>
     </div>
   </section>
 
   <!-- Cameras & Studio Gear -->
   <section class="sec tinted" id="cameras">
-    <div class="container">
+    <div class="wide-wrap">
       <div class="sec-head">
-        <div class="sec-kicker">Equipment &amp; Setup</div>
-        <h2 class="sec-title">Cameras, Drone &amp; Studio Setup</h2>
+        <div class="sec-kicker">Cameras &amp; Equipment</div>
+        <h2 class="sec-title">Our Cameras, Drone &amp; Gimbal</h2>
       </div>
-      <div class="grid-3">
+      <div class="grid-3-wide">
         <div class="card">
-          <h3>Full-Frame &amp; DSLR Cameras</h3>
-          <p>High-detail still photography and cinematic event coverage with dedicated lenses.</p>
+          <h3>Sony Alpha 7 M3 (Full-Frame)</h3>
+          <p>Special full-frame camera for videos, cinematic stories, and reel shoots.</p>
         </div>
         <div class="card">
-          <h3>Drone &amp; Stabilizer</h3>
-          <p>Aerial coverage and smooth motion shots for weddings, pre-weddings, and events.</p>
+          <h3>Nikon D7200 &amp; Nikon D7500</h3>
+          <p>Nikon D7200 for photography and Nikon D7500 for photography &amp; candid shots.</p>
         </div>
         <div class="card">
-          <h3>Studio Print &amp; Digital Desk</h3>
-          <p>Passport photos, albums, frames, banner layout design, printing, and customer services.</p>
+          <h3>DJI Phantom 4 Pro V2.0 &amp; DJI Pro Gimbal</h3>
+          <p>DJI Phantom 4 Pro V2.0 drone for aerial shots and DJI Pro gimbal for smooth motion.</p>
         </div>
       </div>
     </div>
@@ -659,257 +579,178 @@
 
   <!-- Portfolio -->
   <section class="sec" id="portfolio">
-    <div class="container">
+    <div class="wide-wrap">
       <div class="sec-head">
         <div class="sec-kicker">Portfolio</div>
-        <h2 class="sec-title">Your Shoot Photos (Add Your Own Images in Repo)</h2>
+        <h2 class="sec-title">Event Shoots (Click Photo or Watch on Instagram)</h2>
       </div>
 
       <div class="filters">
-        <button type="button" class="f-btn active" onclick="filterCat('All', this)">All Photos</button>
-        <button type="button" class="f-btn" onclick="filterCat('Wedding', this)">Wedding</button>
-        <button type="button" class="f-btn" onclick="filterCat('Pre-Wedding', this)">Pre-Wedding</button>
-        <button type="button" class="f-btn" onclick="filterCat('Haldi', this)">Haldi</button>
-        <button type="button" class="f-btn" onclick="filterCat('Engagement', this)">Engagement</button>
-        <button type="button" class="f-btn" onclick="filterCat('Birthday', this)">Birthday</button>
-        <button type="button" class="f-btn" onclick="filterCat('Drone & Event', this)">Drone &amp; Event</button>
+        <button type="button" class="f-btn active" onclick="filterPortfolio('All', this)">All Photos</button>
+        <button type="button" class="f-btn" onclick="filterPortfolio('Wedding', this)">Wedding</button>
+        <button type="button" class="f-btn" onclick="filterPortfolio('Pre-Wedding', this)">Pre-Wedding</button>
+        <button type="button" class="f-btn" onclick="filterPortfolio('Haldi', this)">Haldi</button>
+        <button type="button" class="f-btn" onclick="filterPortfolio('Engagement', this)">Engagement</button>
+        <button type="button" class="f-btn" onclick="filterPortfolio('Birthday', this)">Birthday</button>
       </div>
 
-      <div class="grid-3">
+      <div class="grid-3-wide">
         <div class="card p-item" data-cat="Wedding">
-          <div class="slot-box" id="slotWedding" onclick="openSlotPhoto('slotWedding', 'Wedding Shoot')">
-            <span>Your Wedding Photo Slot<br />(Upload photo in GitHub repo &amp; set in Admin)</span>
-          </div>
-          <h3>Wedding Shoot</h3>
-          <p>Category: Wedding</p>
+          <img class="photo-thumb" src="https://images.unsplash.com/photo-1519741497674-611481863552?auto=format&amp;fit=crop&amp;w=900&amp;q=80" alt="Wedding" onclick="openPhoto(this.src, 'Wedding')" />
+          <h3>Wedding</h3>
+          <p>Wedding photography &amp; cinema coverage.</p>
         </div>
-
         <div class="card p-item" data-cat="Pre-Wedding">
-          <div class="slot-box" id="slotPreWed" onclick="openSlotPhoto('slotPreWed', 'Pre-Wedding Shoot')">
-            <span>Your Pre-Wedding Photo Slot<br />(Upload photo in GitHub repo &amp; set in Admin)</span>
-          </div>
-          <h3>Pre-Wedding Shoot</h3>
-          <p>Category: Pre-Wedding</p>
+          <img class="photo-thumb" src="https://images.unsplash.com/photo-1537633552985-df8429e8048b?auto=format&amp;fit=crop&amp;w=900&amp;q=80" alt="Pre-Wedding" onclick="openPhoto(this.src, 'Pre-Wedding')" />
+          <h3>Pre-Wedding</h3>
+          <p>Pre-wedding couple &amp; cinematic story shoot.</p>
         </div>
-
         <div class="card p-item" data-cat="Haldi">
-          <div class="slot-box" id="slotHaldi" onclick="openSlotPhoto('slotHaldi', 'Haldi Shoot')">
-            <span>Your Haldi Photo Slot<br />(Upload photo in GitHub repo &amp; set in Admin)</span>
-          </div>
-          <h3>Haldi Shoot</h3>
-          <p>Category: Haldi</p>
+          <img class="photo-thumb" src="https://images.unsplash.com/photo-1583939003579-730e3918a45a?auto=format&amp;fit=crop&amp;w=900&amp;q=80" alt="Haldi" onclick="openPhoto(this.src, 'Haldi')" />
+          <h3>Haldi</h3>
+          <p>Haldi function moments &amp; candid frames.</p>
         </div>
-
         <div class="card p-item" data-cat="Engagement">
-          <div class="slot-box" id="slotEng" onclick="openSlotPhoto('slotEng', 'Engagement Shoot')">
-            <span>Your Engagement Photo Slot<br />(Upload photo in GitHub repo &amp; set in Admin)</span>
-          </div>
-          <h3>Engagement Shoot</h3>
-          <p>Category: Engagement</p>
+          <img class="photo-thumb" src="https://images.unsplash.com/photo-1511285560929-80b456fea0bc?auto=format&amp;fit=crop&amp;w=900&amp;q=80" alt="Engagement" onclick="openPhoto(this.src, 'Engagement')" />
+          <h3>Engagement</h3>
+          <p>Engagement ceremony coverage.</p>
         </div>
-
         <div class="card p-item" data-cat="Birthday">
-          <div class="slot-box" id="slotBday" onclick="openSlotPhoto('slotBday', 'Birthday Shoot')">
-            <span>Your Birthday Photo Slot<br />(Upload photo in GitHub repo &amp; set in Admin)</span>
-          </div>
-          <h3>Birthday Shoot</h3>
-          <p>Category: Birthday</p>
+          <img class="photo-thumb" src="https://images.unsplash.com/photo-1530103862676-de8c9debad1d?auto=format&amp;fit=crop&amp;w=900&amp;q=80" alt="Birthday" onclick="openPhoto(this.src, 'Birthday Event')" />
+          <h3>Birthday Event</h3>
+          <p>Birthday &amp; family celebration shoots.</p>
         </div>
-
-        <div class="card p-item" data-cat="Drone & Event">
-          <div class="slot-box" id="slotDrone" onclick="openSlotPhoto('slotDrone', 'Drone & Event Shoot')">
-            <span>Your Drone / Event Photo Slot<br />(Upload photo in GitHub repo &amp; set in Admin)</span>
-          </div>
-          <h3>Drone &amp; Event Shoot</h3>
-          <p>Category: Drone &amp; Event</p>
+        <div class="card" style="display:flex; flex-direction:column; justify-content:center;">
+          <h3>More Shoots &amp; Videos</h3>
+          <p style="margin-bottom:14px;">To view full shoot photos and videos directly, open Instagram.</p>
+          <a id="portInstaBtn" href="https://www.instagram.com/nayandigitalkhambala?cnvx=MTZtN2swNGtybXpiYg==" target="_blank" class="btn btn-wa">Open Instagram</a>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- Video Gallery -->
-  <section class="sec tinted" id="videos">
-    <div class="container">
+  <!-- Step-by-Step Interactive Selection (Purpose -> Cameras/Gear -> WhatsApp) -->
+  <section class="sec tinted" id="step-builder">
+    <div class="wide-wrap">
       <div class="sec-head">
-        <div class="sec-kicker">Video Gallery</div>
-        <h2 class="sec-title">Wedding Highlights &amp; Pre-Wedding Films</h2>
+        <div class="sec-kicker">Step-by-Step Selection</div>
+        <h2 class="sec-title">Select Event Purpose &amp; Cameras</h2>
       </div>
-      <div class="grid-2">
-        <div class="card">
-          <div class="slot-box" style="cursor:default;" id="vidSlot1">
-            <span>Wedding Highlights Video Link Slot<br />Set your video link in Owner Admin or index.html</span>
-          </div>
-          <h3>Wedding Highlights</h3>
-          <p id="vid1Desc">Add your own wedding highlight video link to show a watch button here.</p>
+
+      <div class="card">
+        <strong style="color:var(--ink);">Step 1: कशासाठी पाहिजे? (Select Purpose)</strong>
+        <div class="choice-group" id="purposeChoices">
+          <button type="button" class="choice-chip selected" onclick="selectPurpose(this, 'Wedding')">Wedding</button>
+          <button type="button" class="choice-chip" onclick="selectPurpose(this, 'Pre-Wedding')">Pre-Wedding</button>
+          <button type="button" class="choice-chip" onclick="selectPurpose(this, 'Haldi')">Haldi</button>
+          <button type="button" class="choice-chip" onclick="selectPurpose(this, 'Engagement')">Engagement</button>
+          <button type="button" class="choice-chip" onclick="selectPurpose(this, 'Birthday Event')">Birthday Event</button>
+          <button type="button" class="choice-chip" onclick="selectPurpose(this, 'Drone & Reel Shoot')">Drone &amp; Reel Shoot</button>
         </div>
 
-        <div class="card">
-          <div class="slot-box" style="cursor:default;" id="vidSlot2">
-            <span>Pre-Wedding Film Link Slot<br />Set your video link in Owner Admin or index.html</span>
-          </div>
-          <h3>Pre-Wedding Films</h3>
-          <p id="vid2Desc">Add your own pre-wedding film or reel link to show a watch button here.</p>
+        <strong style="color:var(--ink);">Step 2: कोणते कॅमेरे / गियर पाहिजेत? (Select One or More)</strong>
+        <div class="choice-group" id="gearChoices">
+          <button type="button" class="choice-chip" onclick="toggleGear(this, 'Sony Alpha 7 M3 (Video, Story & Reel)')">Sony Alpha 7 M3 (Video/Story/Reel)</button>
+          <button type="button" class="choice-chip" onclick="toggleGear(this, 'Nikon D7200 (Photo)')">Nikon D7200 (Photo)</button>
+          <button type="button" class="choice-chip" onclick="toggleGear(this, 'Nikon D7500 (Photo & Candid)')">Nikon D7500 (Photo &amp; Candid)</button>
+          <button type="button" class="choice-chip" onclick="toggleGear(this, 'DJI Phantom 4 Pro V2.0 (Drone)')">DJI Phantom 4 Pro V2.0 (Drone)</button>
+          <button type="button" class="choice-chip" onclick="toggleGear(this, 'DJI Pro (Gimbal)')">DJI Pro (Gimbal)</button>
         </div>
+
+        <div class="collected-box" id="collectedSummary"></div>
+
+        <div class="grid-2-wide">
+          <div class="field">
+            <label>Client Name</label>
+            <input type="text" id="stepName" placeholder="Client name" />
+          </div>
+          <div class="field">
+            <label>Client Mobile Number</label>
+            <input type="tel" id="stepMobile" placeholder="Client 10-digit mobile number" />
+          </div>
+        </div>
+        <button type="button" class="btn btn-wa" onclick="sendStepSelection()">Send Selection to WhatsApp (9923565358)</button>
       </div>
     </div>
   </section>
 
-  <!-- Packages & Pricing (Click any package to see full details) -->
-  <section class="sec" id="packages">
-    <div class="container">
+  <!-- Bottom Full Booking & Contact Section (Landscape 2-Column) -->
+  <section class="sec" id="bottom-booking">
+    <div class="wide-wrap">
       <div class="sec-head">
-        <div class="sec-kicker">Packages &amp; Pricing</div>
-        <h2 class="sec-title">Our Photography Packages (Click Any Package for Details)</h2>
-      </div>
-      <div class="grid-3">
-        <div class="card selectable" onclick="showPackageDetails('basic')">
-          <h3>Basic Package</h3>
-          <div class="price">Custom Price</div>
-          <p>Click to see included &amp; optional details.</p>
-        </div>
-
-        <div class="card selectable featured" onclick="showPackageDetails('premium')">
-          <span class="badge">Popular</span>
-          <h3>Premium Package</h3>
-          <div class="price">Custom Price</div>
-          <p>Click to see included &amp; optional details.</p>
-        </div>
-
-        <div class="card selectable" onclick="showPackageDetails('luxury')">
-          <h3>Luxury Package</h3>
-          <div class="price">Custom Price</div>
-          <p>Click to see included &amp; optional details.</p>
-        </div>
+        <div class="sec-kicker">Full Booking &amp; Contact</div>
+        <h2 class="sec-title">Book Your Event &amp; Contact Us</h2>
       </div>
 
-      <div class="pkg-detail-box" id="pkgDetailsBox">
-        <h3 id="pkgDetailTitle">Package Details — Select Basic, Premium, or Luxury Above</h3>
-        <div class="grid-2" style="margin-top:12px;">
-          <div>
-            <strong style="color:var(--ink); display:block; margin-bottom:6px;">What Is Included:</strong>
-            <ul class="list" id="pkgIncludedList">
-              <li>Click Basic Package, Premium Package, or Luxury Package above to view exact inclusions.</li>
-            </ul>
-          </div>
-          <div>
-            <strong style="color:var(--ink); display:block; margin-bottom:6px;">Extra / Custom Options:</strong>
-            <ul class="list" id="pkgExtraList">
-              <li>Drone coverage, extra album pages, frames, and custom event hours can be requested on WhatsApp.</li>
-            </ul>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Online Booking System -->
-  <section class="sec tinted" id="booking">
-    <div class="container">
-      <div class="sec-head">
-        <div class="sec-kicker">Online Booking System</div>
-        <h2 class="sec-title">Book Your Event</h2>
-      </div>
-      <div class="card" style="max-width:720px;">
-        <form onsubmit="sendClientBooking(event)">
-          <div class="field">
-            <label for="cName">1. Customer Name</label>
-            <input type="text" id="cName" required placeholder="Client's full name" />
-          </div>
-          <div class="field">
-            <label for="cMobile">2. Customer Mobile Number (Client's Number)</label>
-            <input type="tel" id="cMobile" required placeholder="Client's 10-digit mobile number" />
-          </div>
-          <div class="field">
-            <label for="cEmail">3. Email Address</label>
-            <input type="email" id="cEmail" placeholder="client@email.com" />
-          </div>
-          <div class="field">
-            <label for="cEvent">4. Event Type</label>
-            <select id="cEvent">
-              <option value="Wedding">Wedding</option>
-              <option value="Pre-Wedding">Pre-Wedding</option>
-              <option value="Haldi">Haldi</option>
-              <option value="Engagement">Engagement</option>
-              <option value="Birthday">Birthday</option>
-              <option value="Drone & Event">Drone &amp; Event</option>
-              <option value="Studio / Album / Print">Studio / Album / Print</option>
-            </select>
-          </div>
-          <div class="field">
-            <label for="cDate">5. Event Date</label>
-            <input type="date" id="cDate" />
-          </div>
-          <div class="field">
-            <label for="cLoc">6. Event Location</label>
-            <input type="text" id="cLoc" placeholder="Village, Taluka, District" />
-          </div>
-          <div class="field">
-            <label for="cMsg">7. Message</label>
-            <textarea id="cMsg" rows="3" placeholder="Package or extra details"></textarea>
-          </div>
-          <button type="submit" class="btn btn-wa" style="width:100%;">Confirm &amp; Send on WhatsApp</button>
-        </form>
-
-        <div class="summary-box" id="bookingSummary"></div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Contact Us -->
-  <section class="sec" id="contact">
-    <div class="container">
-      <div class="sec-head">
-        <div class="sec-kicker">Contact Us</div>
-        <h2 class="sec-title">Studio Location &amp; Direct Contact</h2>
-      </div>
-      <div class="grid-2">
+      <div class="grid-2-wide" id="contact">
         <div class="card">
-          <h3>NAYAN DIGITAL PHOTO &amp; VIDEO STUDIO KHAMBALA</h3>
-          <p style="margin-bottom:8px;"><strong>Address:</strong> Khambala, Taluka Kinwat, District Nanded, Maharashtra</p>
-          <p style="margin-bottom:8px;" id="dispWa"><strong>WhatsApp / Mobile:</strong> +91 9923565358</p>
-          <p style="margin-bottom:8px;" id="dispEmail"><strong>Studio Email:</strong> Set in Owner Admin or Code</p>
-          <p style="margin-bottom:14px;"><strong>Social:</strong> Instagram • YouTube • WhatsApp</p>
-          <a href="https://www.google.com/maps/search/?api=1&query=Khambala+Kinwat+Nanded+Maharashtra" target="_blank" class="btn btn-dark">Open Google Maps</a>
+          <form onsubmit="submitFullBooking(event)">
+            <div class="field">
+              <label>1. Customer Name</label>
+              <input type="text" id="bName" required placeholder="Client full name" />
+            </div>
+            <div class="field">
+              <label>2. Customer Mobile Number</label>
+              <input type="tel" id="bMobile" required placeholder="Client 10-digit mobile number" />
+            </div>
+            <div class="field">
+              <label>3. Email Address</label>
+              <input type="email" id="bEmail" placeholder="client@email.com" />
+            </div>
+            <div class="field">
+              <label>4. Event Type</label>
+              <select id="bEvent">
+                <option value="Wedding">Wedding</option>
+                <option value="Pre-Wedding">Pre-Wedding</option>
+                <option value="Haldi">Haldi</option>
+                <option value="Engagement">Engagement</option>
+                <option value="Birthday Event">Birthday Event</option>
+              </select>
+            </div>
+            <div class="field">
+              <label>5. Event Date &amp; Location</label>
+              <input type="text" id="bDateLoc" placeholder="Date, Village, Taluka, District" />
+            </div>
+            <div class="field">
+              <label>6. Message</label>
+              <textarea id="bMsg" rows="3" placeholder="Additional details"></textarea>
+            </div>
+            <button type="submit" class="btn btn-wa" style="width:100%;">Confirm &amp; Send on WhatsApp</button>
+          </form>
+          <div class="collected-box" id="bottomStatus" style="display:none; margin-top:12px;"></div>
         </div>
+
         <div class="card">
-          <h3>Direct WhatsApp Connect</h3>
-          <p style="margin-bottom:14px;">Click below to open WhatsApp directly with Nayan Digital Photo &amp; Video Studio Khambala.</p>
-          <a id="contactWaLink" href="#" target="_blank" class="btn btn-wa">Chat on WhatsApp</a>
+          <h3>Contact Details</h3>
+          <p style="margin-bottom:10px;"><strong>Studio:</strong> Nayan Digital Photo &amp; Video Studio Khambala</p>
+          <p style="margin-bottom:10px;"><strong>Address:</strong> Khambala, Taluka Kinwat, District Nanded, Maharashtra</p>
+          <p style="margin-bottom:10px;"><strong>WhatsApp / Phone:</strong> +91 9923565358</p>
+          <p style="margin-bottom:10px;"><strong>Email:</strong> nayandigitalkhambala@gmail.com</p>
+          <p style="margin-bottom:16px;"><strong>Instagram:</strong> <a id="instaText" href="https://www.instagram.com/nayandigitalkhambala?cnvx=MTZtN2swNGtybXpiYg==" target="_blank">@nayandigitalkhambala</a></p>
+          <div style="display:flex; gap:10px; flex-wrap:wrap;">
+            <a id="bottomInstaBtn" href="https://www.instagram.com/nayandigitalkhambala?cnvx=MTZtN2swNGtybXpiYg==" target="_blank" class="btn btn-dark">Instagram</a>
+            <a id="bottomWaBtn" href="#" target="_blank" class="btn btn-wa">WhatsApp</a>
+            <a href="https://www.google.com/maps/search/?api=1&amp;query=Khambala+Kinwat+Nanded+Maharashtra" target="_blank" class="btn btn-light">Google Maps</a>
+          </div>
         </div>
       </div>
 
-      <!-- Owner-Only Panel (PIN: Roshan@2026) -->
+      <!-- Hidden Owner Admin Panel (PIN: Roshan@2026) -->
       <div id="ownerBox">
-        <div class="sec-kicker">Owner Only • Hidden From Clients</div>
-        <h3 style="margin-bottom:12px;">Owner Studio Settings (Browser Preview)</h3>
-        <div class="grid-2">
+        <div class="sec-kicker">Owner Only • PIN: Roshan@2026</div>
+        <h3 style="margin-bottom:12px;">Owner Quick Settings</h3>
+        <div class="grid-2-wide">
+          <div class="field">
+            <label>Instagram Profile / Page Link</label>
+            <input type="text" id="cfgInsta" placeholder="https://www.instagram.com/..." />
+          </div>
           <div class="field">
             <label>Studio WhatsApp (91 + 10 digits)</label>
-            <input type="text" id="setWa" />
-          </div>
-          <div class="field">
-            <label>Studio Email</label>
-            <input type="text" id="setEmail" />
-          </div>
-          <div class="field">
-            <label>Logo Angle (-90deg / 0deg / 90deg / 180deg)</label>
-            <input type="text" id="setAngle" />
-          </div>
-          <div class="field">
-            <label>Wedding Photo File Name (in repo, e.g. wedding.jpg)</label>
-            <input type="text" id="setPhoto1" />
-          </div>
-          <div class="field">
-            <label>Pre-Wedding Photo File Name (e.g. prewed.jpg)</label>
-            <input type="text" id="setPhoto2" />
-          </div>
-          <div class="field">
-            <label>Highlight Video Link (URL)</label>
-            <input type="text" id="setVid1" />
+            <input type="text" id="cfgWa" />
           </div>
         </div>
         <div style="display:flex; gap:10px; flex-wrap:wrap;">
-          <button type="button" class="btn btn-dark" onclick="saveOwnerData()">Save Settings</button>
+          <button type="button" class="btn btn-dark" onclick="saveOwnerCfg()">Save Settings</button>
           <button type="button" class="btn btn-light" onclick="closeOwnerBox()">Hide Panel</button>
         </div>
       </div>
@@ -921,172 +762,155 @@
   <div class="modal" id="photoModal" onclick="closeModal(event)">
     <div class="modal-inner">
       <button type="button" class="modal-x" onclick="closeModal(event)">Close</button>
-      <img id="modalImg" src="" alt="Full View" />
+      <img id="modalImg" src="" alt="Shoot Photo" />
       <p id="modalCaption" style="margin-top:10px; font-weight:700; color:var(--ink);"></p>
     </div>
   </div>
 
   <footer>
-    <div>NAYAN DIGITAL PHOTO &amp; VIDEO STUDIO KHAMBALA • NANDED, MAHARASHTRA</div>
+    <div>NAYAN DIGITAL PHOTO &amp; VIDEO STUDIO KHAMBALA • nayandigitalkhambala@gmail.com</div>
     <button type="button" class="owner-btn" onclick="openOwnerBox()">Owner Admin</button>
   </footer>
 
   <script>
     const OWNER_PIN = "Roshan@2026";
     const STUDIO_WA = "919923565358";
-    const STUDIO_EMAIL = "Update Studio Email";
+    const STUDIO_EMAIL = "nayandigitalkhambala@gmail.com";
+    const INSTAGRAM_URL = "https://www.instagram.com/nayandigitalkhambala?cnvx=MTZtN2swNGtybXpiYg==";
 
-    const packageInfo = {
-      basic: {
-        title: "Basic Package — Details",
-        inc: [
-          "Event photography coverage",
-          "Selected color-edited photos",
-          "Digital delivery"
-        ],
-        ext: [
-          "Extra event hours or additional photographers available on request",
-          "Printed albums and frames can be added separately"
-        ]
-      },
-      premium: {
-        title: "Premium Package (Popular) — Details",
-        inc: [
-          "Wedding photography & videography",
-          "Cinematic highlights",
-          "Custom designed wedding album"
-        ],
-        ext: [
-          "Drone shots and pre-wedding sessions available as add-ons",
-          "Custom layout and extra album sheets on request"
-        ]
-      },
-      luxury: {
-        title: "Luxury Package — Details",
-        inc: [
-          "Complete wedding coverage",
-          "Cinematic film & pre-wedding shoot",
-          "Premium wedding album"
-        ],
-        ext: [
-          "Tailored schedule, extra reels, and gift frames available",
-          "Final details confirmed directly on WhatsApp"
-        ]
-      }
-    };
-
-    const slides = [
-      { cat: "SLIDE 1 OF 4 • WEDDING", title: "Wedding Moments Showcase", desc: "Add your own wedding photo file in Owner Admin or index.html to display here." },
-      { cat: "SLIDE 2 OF 4 • PRE-WEDDING", title: "Pre-Wedding Stories Showcase", desc: "Add your own pre-wedding photo file in Owner Admin or index.html to display here." },
-      { cat: "SLIDE 3 OF 4 • CINEMA & DRONE", title: "Cinematic Films & Drone Angles", desc: "Highlight reels, event coverage, and aerial perspectives." },
-      { cat: "SLIDE 4 OF 4 • STUDIO KHAMBALA", title: "Nayan Digital Photo & Video Studio", desc: "Khambala, Taluka Kinwat, District Nanded • WhatsApp: 9923565358" }
+    const slideList = [
+      { label: "Wedding Shoot Showcase", src: "https://images.unsplash.com/photo-1519741497674-611481863552?auto=format&fit=crop&w=1200&q=80" },
+      { label: "Pre-Wedding Shoot Showcase", src: "https://images.unsplash.com/photo-1537633552985-df8429e8048b?auto=format&fit=crop&w=1200&q=80" },
+      { label: "Haldi & Event Shoot Showcase", src: "https://images.unsplash.com/photo-1583939003579-730e3918a45a?auto=format&fit=crop&w=1200&q=80" },
+      { label: "Engagement & Celebration Showcase", src: "https://images.unsplash.com/photo-1511285560929-80b456fea0bc?auto=format&fit=crop&w=1200&q=80" }
     ];
 
-    let slideIdx = 0;
-
+    let sIdx = 0;
     function renderSlide() {
-      const s = slides[slideIdx];
-      document.getElementById("slideCat").innerText = s.cat;
-      document.getElementById("slideHeading").innerText = s.title;
-      document.getElementById("slideDesc").innerText = s.desc;
+      document.getElementById("mainSlideImg").src = slideList[sIdx].src;
+      document.getElementById("mainSlideLabel").innerText = slideList[sIdx].label;
+    }
+    function nextSlide() { sIdx = (sIdx + 1) % slideList.length; renderSlide(); }
+    function prevSlide() { sIdx = (sIdx - 1 + slideList.length) % slideList.length; renderSlide(); }
+    setInterval(nextSlide, 4200);
+
+    let selectedPurpose = "Wedding";
+    let selectedGear = [];
+
+    function updateCollectedBox() {
+      const gearTxt = selectedGear.length ? selectedGear.join(", ") : "None selected yet";
+      document.getElementById("collectedSummary").innerHTML =
+        `<strong>Selected Purpose:</strong> ${selectedPurpose}<br>` +
+        `<strong>Selected Cameras / Gear:</strong> ${gearTxt}`;
     }
 
-    function nextSlide() {
-      slideIdx = (slideIdx + 1) % slides.length;
-      renderSlide();
+    function selectPurpose(btn, purpose) {
+      document.querySelectorAll("#purposeChoices .choice-chip").forEach(b => b.classList.remove("selected"));
+      btn.classList.add("selected");
+      selectedPurpose = purpose;
+      updateCollectedBox();
     }
 
-    function prevSlide() {
-      slideIdx = (slideIdx - 1 + slides.length) % slides.length;
-      renderSlide();
+    function toggleGear(btn, gearName) {
+      btn.classList.toggle("selected");
+      if (selectedGear.includes(gearName)) {
+        selectedGear = selectedGear.filter(g => g !== gearName);
+      } else {
+        selectedGear.push(gearName);
+      }
+      updateCollectedBox();
     }
 
-    setInterval(nextSlide, 4500);
-
-    function showPackageDetails(key) {
-      const p = packageInfo[key];
-      document.getElementById("pkgDetailTitle").innerText = p.title;
-      document.getElementById("pkgIncludedList").innerHTML = p.inc.map(x => `<li>${x}</li>`).join("");
-      document.getElementById("pkgExtraList").innerHTML = p.ext.map(x => `<li>${x}</li>`).join("");
-      document.getElementById("pkgDetailsBox").scrollIntoView({ behavior: "smooth", block: "nearest" });
-    }
-
-    const baseCfg = {
-      wa: STUDIO_WA,
-      email: STUDIO_EMAIL,
-      angle: "-90deg",
-      photo1: "",
-      photo2: "",
-      vid1: ""
-    };
-
-    function getCfg() {
+    function getActiveConfig() {
       try {
-        return { ...baseCfg, ...(JSON.parse(localStorage.getItem("nd_studio_final")) || {}) };
+        const saved = JSON.parse(localStorage.getItem("nd_final_cfg")) || {};
+        return {
+          wa: saved.wa || STUDIO_WA,
+          insta: saved.insta || INSTAGRAM_URL
+        };
       } catch (e) {
-        return baseCfg;
+        return { wa: STUDIO_WA, insta: INSTAGRAM_URL };
       }
     }
 
-    function applyCfg() {
-      const c = getCfg();
-      document.documentElement.style.setProperty("--logo-angle", c.angle);
-      document.getElementById("dispWa").innerHTML = `<strong>WhatsApp / Mobile:</strong> +${c.wa}`;
-      document.getElementById("dispEmail").innerHTML = `<strong>Studio Email:</strong> ${c.email}`;
+    function applyLinks() {
+      const cfg = getActiveConfig();
+      const waHref = `https://wa.me/${cfg.wa}?text=${encodeURIComponent("Hello Nayan Digital Photo & Video Studio Khambala, I want to book/inquire.")}`;
+      document.getElementById("heroWaBtn").href = waHref;
+      document.getElementById("bottomWaBtn").href = waHref;
+      document.getElementById("waFloat").href = waHref;
 
-      const waUrl = `https://wa.me/${c.wa}?text=${encodeURIComponent("Hello Nayan Digital Photo & Video Studio Khambala, I want to inquire.")}`;
-      document.getElementById("heroWaLink").href = waUrl;
-      document.getElementById("contactWaLink").href = waUrl;
-      document.getElementById("waFloat").href = waUrl;
-
-      if (c.photo1) {
-        document.getElementById("slotWedding").innerHTML = `<img src="${c.photo1}" alt="Wedding Photo" />`;
-      }
-      if (c.photo2) {
-        document.getElementById("slotPreWed").innerHTML = `<img src="${c.photo2}" alt="Pre-Wedding Photo" />`;
-      }
-      if (c.vid1) {
-        document.getElementById("vid1Desc").innerHTML = `<a href="${c.vid1}" target="_blank" class="btn btn-dark" style="margin-top:8px;">Watch Video</a>`;
-      }
+      const igHref = cfg.insta || INSTAGRAM_URL;
+      document.getElementById("heroInstaBtn").href = igHref;
+      document.getElementById("slideInstaLink").href = igHref;
+      document.getElementById("topInstaBtn").href = igHref;
+      document.getElementById("portInstaBtn").href = igHref;
+      document.getElementById("bottomInstaBtn").href = igHref;
+      document.getElementById("instaText").href = igHref;
     }
 
-    function openOwnerBox() {
-      const pin = prompt("Enter Owner PIN:");
-      if (pin === OWNER_PIN) {
-        const c = getCfg();
-        document.getElementById("setWa").value = c.wa;
-        document.getElementById("setEmail").value = c.email;
-        document.getElementById("setAngle").value = c.angle;
-        document.getElementById("setPhoto1").value = c.photo1;
-        document.getElementById("setPhoto2").value = c.photo2;
-        document.getElementById("setVid1").value = c.vid1;
-        const box = document.getElementById("ownerBox");
-        box.classList.add("open");
-        box.scrollIntoView({ behavior: "smooth" });
-      } else if (pin !== null) {
-        alert("Incorrect PIN.");
-      }
+    function sendStepSelection() {
+      const cfg = getActiveConfig();
+      const name = document.getElementById("stepName").value.trim() || "Not given";
+      const mobile = document.getElementById("stepMobile").value.trim() || "Not given";
+      const gearTxt = selectedGear.length ? selectedGear.join(", ") : "Not selected";
+      const text =
+        `STEP SELECTION — NAYAN DIGITAL PHOTO & VIDEO STUDIO KHAMBALA\n` +
+        `Client Name: ${name}\n` +
+        `Client Mobile: ${mobile}\n` +
+        `Purpose: ${selectedPurpose}\n` +
+        `Cameras / Gear: ${gearTxt}\n` +
+        `Studio Email: ${STUDIO_EMAIL}`;
+      window.open(`https://wa.me/${cfg.wa}?text=${encodeURIComponent(text)}`, "_blank");
     }
 
-    function saveOwnerData() {
-      const updated = {
-        wa: document.getElementById("setWa").value.trim() || STUDIO_WA,
-        email: document.getElementById("setEmail").value.trim() || STUDIO_EMAIL,
-        angle: document.getElementById("setAngle").value.trim() || "-90deg",
-        photo1: document.getElementById("setPhoto1").value.trim(),
-        photo2: document.getElementById("setPhoto2").value.trim(),
-        vid1: document.getElementById("setVid1").value.trim()
-      };
-      localStorage.setItem("nd_studio_final", JSON.stringify(updated));
-      applyCfg();
-      alert("Settings saved in this browser.");
+    function submitQuickBooking(e, targetId) {
+      e.preventDefault();
+      const cfg = getActiveConfig();
+      const name = document.getElementById("tName").value.trim();
+      const mobile = document.getElementById("tMobile").value.trim();
+      const ev = document.getElementById("tEvent").value;
+      const dl = document.getElementById("tDateLoc").value.trim() || "Not specified";
+
+      const box = document.getElementById(targetId);
+      box.style.display = "block";
+      box.innerHTML = `<strong>Booking Saved for WhatsApp:</strong> ${name} (${mobile}) — ${ev} | ${dl}`;
+
+      const text =
+        `BOOKING — NAYAN DIGITAL PHOTO & VIDEO STUDIO KHAMBALA\n` +
+        `Client Name: ${name}\n` +
+        `Client Mobile: ${mobile}\n` +
+        `Event Type: ${ev}\n` +
+        `Date & Location: ${dl}`;
+      window.open(`https://wa.me/${cfg.wa}?text=${encodeURIComponent(text)}`, "_blank");
     }
 
-    function closeOwnerBox() {
-      document.getElementById("ownerBox").classList.remove("open");
+    function submitFullBooking(e) {
+      e.preventDefault();
+      const cfg = getActiveConfig();
+      const name = document.getElementById("bName").value.trim();
+      const mobile = document.getElementById("bMobile").value.trim();
+      const email = document.getElementById("bEmail").value.trim() || "Not provided";
+      const ev = document.getElementById("bEvent").value;
+      const dl = document.getElementById("bDateLoc").value.trim() || "Not specified";
+      const msg = document.getElementById("bMsg").value.trim() || "None";
+
+      const box = document.getElementById("bottomStatus");
+      box.style.display = "block";
+      box.innerHTML = `<strong>Booking Prepared:</strong> ${name} | ${mobile} | ${ev} | ${dl}`;
+
+      const text =
+        `FULL BOOKING — NAYAN DIGITAL PHOTO & VIDEO STUDIO KHAMBALA\n` +
+        `Client Name: ${name}\n` +
+        `Client Mobile: ${mobile}\n` +
+        `Email: ${email}\n` +
+        `Event Type: ${ev}\n` +
+        `Date & Location: ${dl}\n` +
+        `Message: ${msg}`;
+      window.open(`https://wa.me/${cfg.wa}?text=${encodeURIComponent(text)}`, "_blank");
     }
 
-    function filterCat(cat, btn) {
+    function filterPortfolio(cat, btn) {
       document.querySelectorAll(".f-btn").forEach(b => b.classList.remove("active"));
       if (btn) btn.classList.add("active");
       document.querySelectorAll(".p-item").forEach(item => {
@@ -1094,13 +918,10 @@
       });
     }
 
-    function openSlotPhoto(slotId, label) {
-      const img = document.querySelector(`#${slotId} img`);
-      if (img && img.src) {
-        document.getElementById("modalImg").src = img.src;
-        document.getElementById("modalCaption").innerText = label;
-        document.getElementById("photoModal").classList.add("open");
-      }
+    function openPhoto(src, cap) {
+      document.getElementById("modalImg").src = src;
+      document.getElementById("modalCaption").innerText = cap;
+      document.getElementById("photoModal").classList.add("open");
     }
 
     function closeModal(e) {
@@ -1109,38 +930,36 @@
       }
     }
 
-    function sendClientBooking(e) {
-      e.preventDefault();
-      const c = getCfg();
-      const name = document.getElementById("cName").value.trim();
-      const mobile = document.getElementById("cMobile").value.trim();
-      const email = document.getElementById("cEmail").value.trim() || "Not provided";
-      const eventType = document.getElementById("cEvent").value;
-      const date = document.getElementById("cDate").value || "Not selected";
-      const loc = document.getElementById("cLoc").value.trim() || "Not provided";
-      const msg = document.getElementById("cMsg").value.trim() || "None";
-
-      const box = document.getElementById("bookingSummary");
-      box.classList.add("show");
-      box.innerHTML =
-        `<strong>Booking Details Ready (Status: Pending Studio Confirmation)</strong><br>` +
-        `Client: ${name} | Client Mobile: ${mobile} | Event: ${eventType} | Date: ${date} | Location: ${loc}`;
-
-      const waMsg =
-        `NEW BOOKING — NAYAN DIGITAL PHOTO & VIDEO STUDIO KHAMBALA\n` +
-        `Client Name: ${name}\n` +
-        `Client Mobile: ${mobile}\n` +
-        `Email: ${email}\n` +
-        `Event Type: ${eventType}\n` +
-        `Event Date: ${date}\n` +
-        `Event Location: ${loc}\n` +
-        `Message: ${msg}`;
-
-      window.open(`https://wa.me/${c.wa}?text=${encodeURIComponent(waMsg)}`, "_blank");
+    function openOwnerBox() {
+      const pin = prompt("Enter Owner PIN:");
+      if (pin === OWNER_PIN) {
+        const cfg = getActiveConfig();
+        document.getElementById("cfgInsta").value = cfg.insta;
+        document.getElementById("cfgWa").value = cfg.wa;
+        const box = document.getElementById("ownerBox");
+        box.classList.add("open");
+        box.scrollIntoView({ behavior: "smooth" });
+      } else if (pin !== null) {
+        alert("Incorrect PIN.");
+      }
     }
 
-    renderSlide();
-    applyCfg();
+    function saveOwnerCfg() {
+      const next = {
+        insta: document.getElementById("cfgInsta").value.trim(),
+        wa: document.getElementById("cfgWa").value.trim() || STUDIO_WA
+      };
+      localStorage.setItem("nd_final_cfg", JSON.stringify(next));
+      applyLinks();
+      alert("Saved.");
+    }
+
+    function closeOwnerBox() {
+      document.getElementById("ownerBox").classList.remove("open");
+    }
+
+    updateCollectedBox();
+    applyLinks();
   </script>
 </body>
 </html>
