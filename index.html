@@ -493,8 +493,8 @@
     <div class="btn-group">
       <a href="#booking-selection" class="btn btn-dark">Book Your Event</a>
       <a href="https://www.instagram.com/nayandigitalkhambala?cnvx=MTZtN2swNGtybXpiYg==" target="_blank" class="btn btn-light">View Shoots &amp; Videos on Instagram</a>
-      <a id="heroWa1" href="https://wa.me/918888008823?text=Hello%20Nayan%20Digital%20Photo%20%26%20Video%20Studio%20Khambala%2C%20I%20want%20to%20inquire." target="_blank" class="btn btn-wa">WhatsApp 1: 8888008823</a>
-      <a id="heroCall2" href="tel:+919923565358" class="btn btn-light">Call 2: 9923565358</a>
+      <a id="heroWa1" href="https://wa.me/919923565358?text=Hello%20Nayan%20Digital%20Photo%20%26%20Video%20Studio%20Khambala%2C%20I%20want%20to%20inquire." target="_blank" class="btn btn-wa">WhatsApp: 9923565358</a>
+      <a id="heroCall2" href="tel:+918888008823" class="btn btn-light">Call: 8888008823</a>
     </div>
   </section>
 
@@ -667,8 +667,8 @@
           <h3>Studio Contact Details</h3>
           <p style="margin-bottom:10px;"><strong>Studio:</strong> Nayan Digital Photo &amp; Video Studio Khambala</p>
           <p style="margin-bottom:10px;"><strong>Address:</strong> Khambala, Taluka Kinwat, District Nanded, Maharashtra</p>
-          <p style="margin-bottom:10px;" id="contactNum1Text"><strong>Contact / WhatsApp 1:</strong> <a href="tel:+918888008823">+91 8888008823</a></p>
-          <p style="margin-bottom:10px;" id="contactNum2Text"><strong>Contact 2:</strong> <a href="tel:+919923565358">+91 9923565358</a></p>
+          <p style="margin-bottom:10px;" id="contactNum1Text"><strong>WhatsApp Number:</strong> <a href="tel:+919923565358">+91 9923565358</a></p>
+          <p style="margin-bottom:10px;" id="contactNum2Text"><strong>Call Number:</strong> <a href="tel:+918888008823">+91 8888008823</a></p>
           <p style="margin-bottom:10px;"><strong>Email:</strong> nayandigitalkhambala@gmail.com</p>
           <p style="margin-bottom:16px;">
             <strong>Instagram:</strong>
@@ -676,8 +676,8 @@
           </p>
           <div style="display:flex; gap:10px; flex-wrap:wrap;">
             <a href="https://www.instagram.com/nayandigitalkhambala?cnvx=MTZtN2swNGtybXpiYg==" target="_blank" class="btn btn-dark">Instagram</a>
-            <a id="contactWa1Btn" href="https://wa.me/918888008823?text=Hello%20Nayan%20Digital%20Photo%20%26%20Video%20Studio%20Khambala%2C%20I%20want%20to%20inquire." target="_blank" class="btn btn-wa">WhatsApp: 8888008823</a>
-            <a id="contactCall2Btn" href="tel:+919923565358" class="btn btn-light">Call: 9923565358</a>
+            <a id="contactWa1Btn" href="https://wa.me/919923565358?text=Hello%20Nayan%20Digital%20Photo%20%26%20Video%20Studio%20Khambala%2C%20I%20want%20to%20inquire." target="_blank" class="btn btn-wa">WhatsApp: 9923565358</a>
+            <a id="contactCall2Btn" href="tel:+918888008823" class="btn btn-light">Call: 8888008823</a>
             <a href="https://www.google.com/maps/search/?api=1&amp;query=Khambala+Kinwat+Nanded+Maharashtra" target="_blank" class="btn btn-light">Google Maps</a>
           </div>
         </div>
@@ -689,11 +689,11 @@
         <h3 style="margin-bottom:12px;">Owner Quick Settings</h3>
         <div class="grid-2-wide">
           <div class="field">
-            <label>First Contact / WhatsApp 1 (91 + 10 digits)</label>
+            <label>WhatsApp Number (91 + 10 digits)</label>
             <input type="text" id="cfgWa1" />
           </div>
           <div class="field">
-            <label>Second Contact Number 2 (91 + 10 digits)</label>
+            <label>Call Number (91 + 10 digits)</label>
             <input type="text" id="cfgWa2" />
           </div>
           <div class="field">
@@ -709,7 +709,7 @@
     </div>
   </section>
 
-  <a id="floatWa" class="wa-float" href="https://wa.me/918888008823?text=Hello%20Nayan%20Digital%20Photo%20%26%20Video%20Studio%20Khambala%2C%20I%20want%20to%20inquire." target="_blank">WhatsApp</a>
+  <a id="floatWa" class="wa-float" href="https://wa.me/919923565358?text=Hello%20Nayan%20Digital%20Photo%20%26%20Video%20Studio%20Khambala%2C%20I%20want%20to%20inquire." target="_blank">WhatsApp</a>
 
   <div class="modal" id="photoModal" onclick="closeModal(event)">
     <div class="modal-inner">
@@ -726,8 +726,8 @@
 
   <script>
     const OWNER_PIN = "Roshan@2026";
-    const STUDIO_WA_1 = "918888008823";
-    const STUDIO_WA_2 = "919923565358";
+    const STUDIO_WA_1 = "919923565358";
+    const STUDIO_WA_2 = "918888008823";
     const STUDIO_EMAIL = "nayandigitalkhambala@gmail.com";
     const INSTAGRAM_URL = "https://www.instagram.com/nayandigitalkhambala?cnvx=MTZtN2swNGtybXpiYg==";
 
@@ -776,7 +776,7 @@
 
     function getActiveConfig() {
       try {
-        const saved = JSON.parse(localStorage.getItem("nd_final_cfg_v3")) || {};
+        const saved = JSON.parse(localStorage.getItem("nd_final_cfg_v4")) || {};
         return {
           wa1: saved.wa1 || STUDIO_WA_1,
           wa2: saved.wa2 || STUDIO_WA_2,
@@ -793,13 +793,13 @@
       const num2Clean = cfg.wa2.replace(/^91/, "");
 
       document.getElementById("contactNum1Text").innerHTML =
-        `<strong>Contact / WhatsApp 1:</strong> <a href="tel:+${cfg.wa1}">+${cfg.wa1}</a>`;
+        `<strong>WhatsApp Number:</strong> <a href="tel:+${cfg.wa1}">+${cfg.wa1}</a>`;
       document.getElementById("contactNum2Text").innerHTML =
-        `<strong>Contact 2:</strong> <a href="tel:+${cfg.wa2}">+${cfg.wa2}</a>`;
+        `<strong>Call Number:</strong> <a href="tel:+${cfg.wa2}">+${cfg.wa2}</a>`;
 
-      document.getElementById("heroWa1").innerText = `WhatsApp 1: ${num1Clean}`;
+      document.getElementById("heroWa1").innerText = `WhatsApp: ${num1Clean}`;
       document.getElementById("heroWa1").href = `https://wa.me/${cfg.wa1}?text=${encodeURIComponent("Hello Nayan Digital Photo & Video Studio Khambala, I want to inquire.")}`;
-      document.getElementById("heroCall2").innerText = `Call 2: ${num2Clean}`;
+      document.getElementById("heroCall2").innerText = `Call: ${num2Clean}`;
       document.getElementById("heroCall2").href = `tel:+${cfg.wa2}`;
 
       document.getElementById("contactWa1Btn").innerText = `WhatsApp: ${num1Clean}`;
@@ -879,7 +879,7 @@
         wa2: document.getElementById("cfgWa2").value.trim() || STUDIO_WA_2,
         insta: document.getElementById("cfgInsta").value.trim() || INSTAGRAM_URL
       };
-      localStorage.setItem("nd_final_cfg_v3", JSON.stringify(next));
+      localStorage.setItem("nd_final_cfg_v4", JSON.stringify(next));
       applyContactNumbers();
       alert("Saved.");
     }
